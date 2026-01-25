@@ -137,13 +137,33 @@
 <!-- Trust / Local CTA Section -->
 <section class="py-5 bg-gradient bg-dark border-top border-bottom border-primary text-center">
   <div class="container">
-    <h2 class="text-primary mb-4">Serving Orlando & Central Florida</h2>
-    <p class="lead mb-4">Local expertise you can trust – drop by for repairs, unlocks or security consultations. Fast, secure, and Orlando-based.</p>
-    <a href="mailto:info@unlockmxpro.com" class="btn btn-primary btn-lg">Contact Us Today</a>
-  </div>
+    <h2 class="text-primary mb-4">We serve Central Florida from our Orlando base, as well as remote sites.</h2>
+    <!-- Simple Contact Form -->
+<section class="py-5 text-center">
+  <h3 class="text-primary mb-4">Get in Touch</h3>
+  <p class="lead mb-4">Questions about security scans, unlocks, repairs, or monthly plans? Drop us a message!</p>
+  
+  <form action="https://formspree.io/f/xaqegerz" method="POST" class="row g-3 justify-content-center">
+    <div class="col-md-6">
+      <input type="text" name="name" class="form-control bg-secondary text-light" placeholder="Your Name" required>
+    </div>
+    <div class="col-md-6">
+      <input type="email" name="email" class="form-control bg-secondary text-light" placeholder="Your Email" required>
+    </div>
+    <div class="col-12">
+      <input type="text" name="phone" class="form-control bg-secondary text-light" placeholder="Phone (optional – for Orlando locals)">
+    </div>
+    <div class="col-12">
+      <textarea name="message" class="form-control bg-secondary text-light" rows="5" placeholder="Tell us about your needs (e.g., phone unlock, security scan, monthly plan)" required></textarea>
+    </div>
+    <!-- Optional: Honeypot spam trap -->
+    <input type="text" name="_gotcha" style="display:none" />
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary btn-lg w-100">Send Message</button>
+    </div>
+  </form>
+  
+  <p class="text-muted small mt-3">We'll reply within 24 hours. Orlando drop-off available!</p>
 </section>
-
-<!-- Optional: Add subtle animation CSS in <head> or style.css -->
-<style>
-  .hover-lift:hover { transform: translateY(-10px); transition: 0.3s; }
-</style>
+    
+    
