@@ -1,0 +1,11 @@
+unlockmxpro-site/          ← root of your repo
+├── index.html             ← Homepage
+├── endpoint-security.html ← Main Endpoint Security overview
+├── server-security.html   ← Server-specific section
+├── mobile-security.html   ← Mobile devices section
+├── css/
+│   └── style.css          ← Shared styles (or use Bootstrap CDN)
+├── js/
+│   └── script.js          ← Optional JS (e.g., dark mode toggle)
+└── images/                ← Logos, icons, screenshots
+    └── (your images here)
