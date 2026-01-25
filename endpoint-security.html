@@ -46,32 +46,145 @@
   <!-- Main content starts here – customize per page -->
   <main class="container my-5">
     <!-- Paste page-specific content here -->
-  </main>
+ <!-- Inside <main class="container my-5"> ... </main> -->
 
-  <!-- Footer (shared) -->
-  <footer class="bg-black text-center py-4 border-top border-primary">
-    <p>&copy; 2026 UnlockMX Pro | Securing the Edge | <a href="#" class="text-primary">Privacy Policy</a></p>
-  </footer>
+<h1 class="text-primary mb-4">Endpoint Security in 2026: Challenges, Vulnerabilities, and Defenses</h1>
+<p class="lead mb-5">In 2026, endpoints—laptops, servers, mobiles, and IoT devices—are the frontline of cyber defense. With AI-powered attacks rising, remote work persisting, and supply chains under siege, understanding key challenges and vulnerabilities is crucial. UnlockMX Pro breaks it down with practical insights to help you protect your assets.</p>
 
-  <!-- Bootstrap JS CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
-<!-- Inside <main> -->
-<h1 class="text-primary mb-4">Endpoint Security in 2026</h1>
-<p class="lead">Protect every device that touches your data: laptops, servers, mobiles.</p>
+<!-- Visual: Endpoint Security Market Illustration (shows vulnerabilities by sector) -->
+<div class="text-center mb-5">
+  <img src="https://s3.mordorintelligence.com/endpoint-detection-and-response-market/endpoint-detection-and-response-market-Endpoint-Detection-And-Response-EDR-Market-Market-Share-by-End-User-Vertical-2025-1767011813192.webp" alt="Endpoint security vulnerabilities by industry sector in 2026" class="img-fluid rounded shadow border border-primary" style="max-width: 80%;">
+  <p class="text-muted small mt-2">Vulnerabilities vary by sector—finance and healthcare face higher risks.
 
-<!-- Cards or list from previous response -->
-<div class="row g-4">
-  <div class="col-md-4">
-    <div class="card bg-dark border-primary h-100">
-      <div class="card-body">
-        <h5><i class="fas fa-shield-halved me-2"></i> Modern EDR/XDR</h5>
-        <p>Behavior-based detection with tools like CrowdStrike, SentinelOne, Microsoft Defender.</p>
+<grok-card data-id="011c39" data-type="image_card" data-plain-type="render_searched_image"  data-arg-size="LARGE" ></grok-card>
+
+</p>
+</div>
+
+<h2 class="text-primary mb-4">Major Cyber Challenges in Endpoint Security (2026 Landscape)</h2>
+<p>Endpoint security challenges stem from evolving threat actors, technology shifts, and organizational gaps. Here's an in-depth look at the top issues based on 2026 trends:</p>
+
+<div class="accordion" id="challengesAccordion">
+  <!-- Challenge 1: AI-Powered Phishing and Social Engineering -->
+  <div class="accordion-item bg-dark border border-primary mb-3">
+    <h3 class="accordion-header">
+      <button class="accordion-button collapsed bg-secondary text-light" type="button" data-bs-toggle="collapse" data-bs-target="#challenge1">
+        1. AI-Powered Phishing and Social Engineering
+      </button>
+    </h3>
+    <div id="challenge1" class="accordion-collapse collapse">
+      <div class="accordion-body">
+        <p>In 2026, AI tools enable hyper-personalized phishing attacks that mimic trusted voices, emails, or deepfake videos. Attackers use generative AI to craft convincing lures, bypassing traditional filters.<grok-card data-id="c07969" data-type="citation_card" data-plain-type="render_inline_citation" ></grok-card> This challenge is amplified by remote work, where employees access corporate endpoints from unsecured home networks, leading to credential theft and lateral movement.</p>
+        <p>Impact: Up to 90% of breaches start with phishing; in endpoints, this results in malware deployment like ransomware.<grok-card data-id="7be034" data-type="citation_card" data-plain-type="render_inline_citation" ></grok-card> Organizations struggle with employee awareness, as AI makes detection harder without behavioral analytics.</p>
+        <ul>
+          <li>Example: Deepfake CEO calls tricking admins into approving malicious app installs on mobile endpoints.</li>
+          <li>Why it's growing: AI accessibility (e.g., open-source models) lowers the barrier for cybercriminals.</li>
+        </ul>
       </div>
     </div>
   </div>
-  <!-- Add more cards: patching, MFA, encryption, etc. -->
+
+  <!-- Challenge 2: Ransomware and Automated Malware -->
+  <div class="accordion-item bg-dark border border-primary mb-3">
+    <h3 class="accordion-header">
+      <button class="accordion-button collapsed bg-secondary text-light" type="button" data-bs-toggle="collapse" data-bs-target="#challenge2">
+        2. Ransomware Targeting Endpoints and Automated Exploits
+      </button>
+    </h3>
+    <div id="challenge2" class="accordion-collapse collapse">
+      <div class="accordion-body">
+        <p>Ransomware has evolved into "ransomware-as-a-service" models, with automated variants exploiting unpatched endpoints in real-time.<grok-card data-id="984204" data-type="citation_card" data-plain-type="render_inline_citation" ></grok-card> Challenges include rapid encryption (zero-day attacks) and double-extortion (data theft + encryption).</p>
+        <p>Impact: Endpoints like servers are prime targets due to high-value data; recovery costs average millions, with downtime crippling operations.<grok-card data-id="d48ce4" data-type="citation_card" data-plain-type="render_inline_citation" ></grok-card></p>
+        <ul>
+          <li>Example: AI-driven malware scanning networks for weak endpoints, then self-propagating like WannaCry evolutions.</li>
+          <li>Why it's growing: Hybrid cloud setups create more entry points.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add more: Identity Attacks, Mobile Mismanagement, Lack of Visibility -->
+  <div class="accordion-item bg-dark border border-primary mb-3">
+    <h3 class="accordion-header">
+      <button class="accordion-button collapsed bg-secondary text-light" type="button" data-bs-toggle="collapse" data-bs-target="#challenge3">
+        3. Identity and Access Management Attacks
+      </button>
+    </h3>
+    <div id="challenge3" class="accordion-collapse collapse">
+      <div class="accordion-body">
+        <p>With zero-trust adoption lagging, attackers target weak MFA or stolen credentials to hijack endpoints.<grok-card data-id="48083d" data-type="citation_card" data-plain-type="render_inline_citation" ></grok-card> Challenges include managing BYOD policies and shadow IT.</p>
+        <p>Impact: Once inside, attackers pivot to sensitive servers or mobiles, exfiltrating data undetected.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item bg-dark border border-primary mb-3">
+    <h3 class="accordion-header">
+      <button class="accordion-button collapsed bg-secondary text-light" type="button" data-bs-toggle="collapse" data-bs-target="#challenge4">
+        4. Mobile Device Mismanagement and IoT Expansion
+      </button>
+    </h3>
+    <div id="challenge4" class="accordion-collapse collapse">
+      <div class="accordion-body">
+        <p>Mobiles face app sideloading risks and unpatched OS vulnerabilities, while IoT devices lack built-in security.<grok-card data-id="2c90c1" data-type="citation_card" data-plain-type="render_inline_citation" ></grok-card> Challenge: Unified management across diverse endpoints.</p>
+        <p>Impact: Lost devices lead to data leaks; IoT botnets (e.g., Mirai variants) amplify DDoS from endpoints.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item bg-dark border border-primary mb-3">
+    <h3 class="accordion-header">
+      <button class="accordion-button collapsed bg-secondary text-light" type="button" data-bs-toggle="collapse" data-bs-target="#challenge5">
+        5. Lack of End-to-End Visibility in Hybrid Environments
+      </button>
+    </h3>
+    <div id="challenge5" class="accordion-collapse collapse">
+      <div class="accordion-body">
+        <p>Cloud migration creates blind spots; organizations lack real-time monitoring across on-prem and cloud endpoints.<grok-card data-id="0b2b69" data-type="citation_card" data-plain-type="render_inline_citation" ></grok-card></p>
+        <p>Impact: Delayed threat detection, allowing persistence for weeks.</p>
+      </div>
+    </div>
+  </div>
 </div>
 
-<!-- Add the full list/table you want from earlier -->
+<!-- Visual: AI in Cybersecurity Threats -->
+<div class="text-center mb-5 mt-5">
+  <img src="https://www.marketsandmarkets.com/Images/artificial-intelligence-ai-cyber-security-market-region.webp" alt="AI-driven cybersecurity challenges in 2026" class="img-fluid rounded shadow border border-primary" style="max-width: 80%;">
+  <p class="text-muted small mt-2">AI amplifies threats across regions—global vulnerability map.
+
+<grok-card data-id="230cf2" data-type="image_card" data-plain-type="render_searched_image"  data-arg-size="LARGE" ></grok-card>
+
+</p>
+</div>
+
+<h2 class="text-primary mb-4">Common Endpoint Vulnerabilities in 2026</h2>
+<p>Vulnerabilities are specific flaws attackers exploit. Here's a deep dive into prevalent ones:</p>
+
+<ul class="list-group mb-5">
+  <li class="list-group-item bg-dark border-primary mb-2">
+    <strong>Browser Vulnerabilities:</strong> Drive-by downloads and credential theft via unpatched browsers (e.g., Chrome zero-days).<grok-card data-id="36a9fd" data-type="citation_card" data-plain-type="render_inline_citation" ></grok-card> In-depth: Attackers inject malicious scripts; mobile browsers are especially vulnerable due to app integrations.
+  </li>
+  <li class="list-group-item bg-dark border-primary mb-2">
+    <strong>Known Exploited Vulnerabilities (KEVs):</strong> Unpatched software like Log4j remnants or new CVEs in edge services.<grok-card data-id="f60062" data-type="citation_card" data-plain-type="render_inline_citation" ></grok-card> In-depth: Configuration drift worsens this; endpoints in APIs/cloud are hit first.
+  </li>
+  <li class="list-group-item bg-dark border-primary mb-2">
+    <strong>Cloud and API Exposures:</strong> Misconfigured APIs leading to data exfiltration.<grok-card data-id="81355c" data-type="citation_card" data-plain-type="render_inline_citation" ></grok-card> In-depth: Multi-environment attacks chain vulnerabilities across endpoints.
+  </li>
+  <li class="list-group-item bg-dark border-primary mb-2">
+    <strong>Supply Chain Weaknesses:</strong> Third-party software compromises (e.g., SolarWinds-like).<grok-card data-id="6201a3" data-type="citation_card" data-plain-type="render_inline_citation" ></grok-card> In-depth: Endpoints download tainted updates, enabling backdoors.
+  </li>
+  <li class="list-group-item bg-dark border-primary mb-2">
+    <strong>Zero-Day Exploits:</strong> Undiscovered flaws in OS/firmware, exploited by state actors.<grok-card data-id="825212" data-type="citation_card" data-plain-type="render_inline_citation" ></grok-card> In-depth: Requires proactive hunting via EDR.
+  </li>
+</ul>
+
+<h2 class="text-primary mb-4">Mitigation Strategies and Best Practices</h2>
+<p>To counter these, adopt a layered approach:</p>
+<ul>
+  <li><strong>Deploy EDR/XDR:</strong> Tools like SentinelOne for AI threat hunting.<grok-card data-id="051111" data-type="citation_card" data-plain-type="render_inline_citation" ></grok-card></li>
+  <li><strong>Zero-Trust Access:</strong> Verify every endpoint connection.</li>
+  <li><strong>Regular Patching and Scanning:</strong> Use vulnerability assessments.<grok-card data-id="3ad250" data-type="citation_card" data-plain-type="render_inline_citation" ></grok-card></li>
+  <li><strong>Employee Training:</strong> Phishing simulations.</li>
+  <li><strong>Unified Management:</strong> MDM for mobiles, SIEM for visibility.</li>
+</ul>
+<p>Need help? Check our <a href="services.html">Services</a> for custom endpoint audits starting at $99.</p>
