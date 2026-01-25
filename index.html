@@ -46,20 +46,104 @@
   <!-- Main content starts here – customize per page -->
   <main class="container my-5">
     <!-- Paste page-specific content here -->
-  </main>
+ <!-- Inside <main class="container my-5"> ... but we'll override with full-width sections -->
 
-  <!-- Footer (shared) -->
-  <footer class="bg-black text-center py-4 border-top border-primary">
-    <p>&copy; 2026 UnlockMX Pro | Securing the Edge | <a href="#" class="text-primary">Privacy Policy</a></p>
-  </footer>
+<!-- Hero Section – Full-width, high-impact -->
+<section class="bg-dark text-white py-5 text-center" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80'); background-size: cover; background-position: center;">
+  <div class="container py-5">
+    <h1 class="display-3 fw-bold text-primary mb-3">Unlock Stronger Protection</h1>
+    <p class="lead fs-4 mb-4">Cybersecurity for computers, servers & mobiles + safe cellphone unlocking, repairs & parts in Orlando, FL</p>
+    <p class="mb-4">From rootkit scans to premium monthly maintenance — secure your devices without compromise.</p>
+    
+    <div class="d-flex justify-content-center gap-3 flex-wrap">
+      <a href="services.html" class="btn btn-primary btn-lg px-5">View Services & Pricing</a>
+      <a href="endpoint-security.html" class="btn btn-outline-primary btn-lg px-5">Learn Endpoint Security</a>
+    </div>
+  </div>
+</section>
 
-  <!-- Bootstrap JS CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
-<!-- Inside <main> -->
-<div class="text-center py-5">
-  <h1 class="display-4 fw-bold text-primary">Unlock Stronger Protection</h1>
-  <p class="lead">Endpoint security for servers, mobiles, and everything in between.</p>
-  <a href="endpoint-security.html" class="btn btn-outline-primary btn-lg">Explore Endpoint Security →</a>
-</div>
+<!-- Quick Value Props / Stats Section -->
+<section class="py-5 bg-black">
+  <div class="container">
+    <div class="row text-center g-4">
+      <div class="col-md-3">
+        <i class="fas fa-shield-halved fa-3x text-primary mb-3"></i>
+        <h4>Advanced Threat Scanning</h4>
+        <p>Rootkit, Trojan & Virus Detection</p>
+      </div>
+      <div class="col-md-3">
+        <i class="fas fa-mobile-alt fa-3x text-primary mb-3"></i>
+        <h4>Cellphone Unlocking & Repair</h4>
+        <p>Carrier Unlocks + Screen/Battery Fixes</p>
+      </div>
+      <div class="col-md-3">
+        <i class="fas fa-dollar-sign fa-3x text-primary mb-3"></i>
+        <h4>Affordable Monthly Plans</h4>
+        <p>$19.99/device – Full Maintenance</p>
+      </div>
+      <div class="col-md-3">
+        <i class="fas fa-map-marker-alt fa-3x text-primary mb-3"></i>
+        <h4>Orlando Local Service</h4>
+        <p>Drop-off, Pickup & Same-Day Options</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Services Cards -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-primary text-center mb-5">What We Offer</h2>
+    <div class="row g-4">
+      <!-- Card 1: Endpoint Security -->
+      <div class="col-md-4">
+        <div class="card bg-dark border-primary h-100 shadow hover-lift">
+          <img src="https://images.unsplash.com/photo-1555949963-aa79d0ebc8fb?auto=format&fit=crop&q=80&w=800" class="card-img-top" alt="Endpoint protection visualization">
+          <div class="card-body">
+            <h5 class="card-title text-primary">Endpoint Security</h5>
+            <p class="card-text">Protect computers, servers & mobiles from ransomware, rootkits & exploits. In-depth guides & professional setup.</p>
+            <a href="endpoint-security.html" class="btn btn-outline-primary">Explore Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: Cellphone Services -->
+      <div class="col-md-4">
+        <div class="card bg-dark border-primary h-100 shadow hover-lift">
+          <img src="https://dashrepairs.com/wp-content/uploads/2023/01/pexels-tyler-lastovich-699122-scaled.webp" class="card-img-top" alt="Cellphone repair and unlocking">
+          <div class="card-body">
+            <h5 class="card-title text-primary">Cellphone Unlocking & Repair</h5>
+            <p class="card-text">Safe network unlocks, FRP bypass, screen/battery repairs & genuine parts. Fast Orlando service.</p>
+            <a href="services.html" class="btn btn-outline-primary">Get Quote</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3: Monthly Maintenance -->
+      <div class="col-md-4">
+        <div class="card bg-dark border-primary h-100 shadow hover-lift">
+          <img src="https://images.unsplash.com/photo-1563986768609-620da13593e0?auto=format&fit=crop&q=80&w=800" class="card-img-top" alt="Ongoing security shield">
+          <div class="card-body">
+            <h5 class="card-title text-primary">All-in-One Monthly Protection</h5>
+            <p class="card-text">$19.99/device – Scans, updates, backups & support. Best value for peace of mind.</p>
+            <a href="services.html#subscribe" class="btn btn-outline-primary">Start Subscription</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Trust / Local CTA Section -->
+<section class="py-5 bg-gradient bg-dark border-top border-bottom border-primary text-center">
+  <div class="container">
+    <h2 class="text-primary mb-4">Serving Orlando & Central Florida</h2>
+    <p class="lead mb-4">Local expertise you can trust – drop by for repairs, unlocks or security consultations. Fast, secure, and Orlando-based.</p>
+    <a href="mailto:info@unlockmxpro.com" class="btn btn-primary btn-lg">Contact Us Today</a>
+  </div>
+</section>
+
+<!-- Optional: Add subtle animation CSS in <head> or style.css -->
+<style>
+  .hover-lift:hover { transform: translateY(-10px); transition: 0.3s; }
+</style>
