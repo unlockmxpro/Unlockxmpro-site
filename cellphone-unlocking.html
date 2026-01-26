@@ -120,5 +120,72 @@
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- IMEI Validation Script -->
+<script>
+  function isValidIMEI(imei) {
+    imei = imei.replace(/\D/g, ''); // Remove any non-digits just in case
+    if (imei.length !== 15 || !/^\d{15}$/.test(imei)) {
+      return false;
+    }
+
+    // Luhn algorithm implementation
+    let sum = 0;
+    let digits = imei.split('').map(Number);
+    let lastDigit = digits.pop(); // Remove check digit
+
+    // Double every second digit from right (excluding check digit)
+    for (let i = digits.length - 1; i >= 0; i--) {
+      let digit = digits[i];
+      if ((digits.length - i) % 2 === 1) { // Every second from right
+        digit *= 2;
+        if (digit > 9) digit -= 9;
+      }
+      sum += digit;
+    }
+
+    sum += lastDigit;
+    return sum % 10 === 0;
+  }
+
+  // Attach to form
+  document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('form');
+    const imeiInput = document.getElementById('imei');
+    const errorDiv = document.createElement('div');
+    errorDiv.className = 'invalid-feedback d-block';
+    errorDiv.style.color = '#dc3545';
+    imeiInput.parentNode.appendChild(errorDiv);
+
+    form.addEventListener('submit', function(e) {
+      const imeiValue = imeiInput.value.trim();
+      if (!isValidIMEI(imeiValue)) {
+        e.preventDefault();
+        imeiInput.classList.add('is-invalid');
+        errorDiv.textContent = 'Invalid IMEI: Must be exactly 15 digits and pass Luhn check.';
+      } else {
+        imeiInput.classList.remove('is-invalid');
+        errorDiv.textContent = '';
+      }
+    });
+
+    // Real-time feedback (optional)
+    imeiInput.addEventListener('input', function() {
+      if (this.value.length === 15) {
+        if (isValidIMEI(this.value)) {
+          this.classList.add('is-valid');
+          this.classList.remove('is-invalid');
+          errorDiv.textContent = '';
+        } else {
+          this.classList.add('is-invalid');
+          this.classList.remove('is-valid');
+          errorDiv.textContent = 'IMEI failed Luhn check (invalid check digit).';
+        }
+      } else {
+        this.classList.remove('is-valid', 'is-invalid');
+        errorDiv.textContent = '';
+      }
+    });
+  });
+</script>
 </body>
 </html>
