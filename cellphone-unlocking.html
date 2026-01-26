@@ -13,6 +13,13 @@
   <!-- Your custom CSS if any -->
   <link rel="stylesheet" href="css/style.css">
 </head>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  <script>
+  function onTurnstileSuccess(token) {
+    document.getElementById('cf-turnstile-response').value = token;
+    // Optional: enable submit button if you disabled it
+  }
+</script>
 <body class="bg-dark text-light">
 
   <!-- Navigation Bar – Add the new tab here -->
@@ -121,7 +128,13 @@
             <label for="message" class="form-label">Additional Notes (optional)</label>
             <textarea class="form-control bg-dark text-light border-primary" id="message" name="message" rows="3" placeholder="e.g., locked to AT&T, need for international travel"></textarea>
           </div>
-
+<!-- Cloudflare Turnstile CAPTCHA -->
+<div class="cf-turnstile mb-3" 
+     data-sitekey="0x4AAAAAACSaOInpX2kE6uf7" 
+     data-callback="onTurnstileSuccess" 
+     data-theme="dark"  <!-- matches your dark theme -->
+     data-size="normal"></div>
+          <input type="hidden" name="cf-turnstile-response" id="cf-turnstile-response">
           <button type="submit" class="btn btn-primary btn-lg w-100">Get My Quote</button>
         </form>
 
