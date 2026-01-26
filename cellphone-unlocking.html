@@ -68,10 +68,24 @@
           <input type="text" name="_gotcha" style="display:none" />
 
           <div class="mb-3">
-            <label for="imei" class="form-label">Phone IMEI Number <span class="text-danger">*</span></label>
-            <input type="text" class="form-control bg-dark text-light border-primary" id="imei" name="imei" placeholder="e.g., 35xxxxxxxxxxxxx" pattern="[0-9]{15}" maxlength="15" required>
-            <div class="form-text text-muted">15-digit number (dial *#06# or check Settings/About Phone).</div>
-          </div>
+  <label for="imei" class="form-label">Phone IMEI Number <span class="text-danger">*</span></label>
+  <input type="text"
+         class="form-control bg-dark text-light border-primary"
+         id="imei"
+         name="imei"
+         placeholder="e.g., 350077523237513"
+         pattern="\d{15}"
+         maxlength="15"
+         title="Exactly 15 digits"
+         inputmode="numeric"
+         required>
+  <div class="invalid-feedback">
+    Please enter a valid 15-digit IMEI.
+  </div>
+  <div class="form-text text-muted">
+    Dial *#06# or check Settings → About Phone to find your IMEI.
+  </div>
+</div>
 
           <div class="mb-3">
             <label for="carrier" class="form-label">Current Carrier <span class="text-danger">*</span></label>
