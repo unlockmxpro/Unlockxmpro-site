@@ -10,5 +10,43 @@
     <p>Feel free to try again or <a href="mailto:info@unlockmxpro.com">contact us</a> if you have questions.</p>
     <a href="services.html" class="btn btn-primary btn-lg mt-4">Back to Services</a>
   </div>
+  <script>
+  // Set initial language
+  function setLanguage(lang) {
+    document.body.setAttribute('data-lang', lang);
+    localStorage.setItem('preferredLanguage', lang);
+
+    // Update dropdown text
+    const toggle = document.getElementById('langDropdown');
+    if (toggle) {
+      toggle.innerHTML = `<i class="fas fa-globe me-1"></i> ${lang === 'es' ? 'Español' : 'English'}`;
+    }
+  }
+
+  // On page load
+  document.addEventListener('DOMContentLoaded', () => {
+    let lang = localStorage.getItem('preferredLanguage');
+
+    // Auto-detect if no preference saved
+    if (!lang) {
+      if (navigator.language.startsWith('es')) {
+        lang = 'es';
+      } else {
+        lang = 'en';
+      }
+    }
+
+    setLanguage(lang);
+
+    // Handle clicks on switcher links
+    document.querySelectorAll('.lang-switch').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const newLang = link.dataset.lang;
+        setLanguage(newLang);
+      });
+    });
+  });
+</script>
 </body>
 </html>
