@@ -73,6 +73,7 @@
   // ...
 </script>
 <head>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cellphone Unlocking - UnlockMX Pro</title>
@@ -276,16 +277,15 @@
     });
   });
 </script>
-<!-- Cloudflare Turnstile CAPTCHA -->
-<div class="cf-turnstile mb-3" 
-     data-sitekey="0x4AAAAAACSaOInpX2kE6uf7" 
-     data-callback="onTurnstileSuccess" 
-     data-theme="dark"  <!-- matches your dark theme -->
-     data-size="normal"></div>
-          <input type="hidden" name="cf-turnstile-response" id="cf-turnstile-response">
-          <button type="submit" class="btn btn-primary btn-lg w-100">Get My Quote</button>
-        </form>
 
+        </form>
+<!-- Cloudflare Turnstile CAPTCHA -->
+<div class="cf-turnstile mb-4 text-center"
+     data-sitekey="0x4AAAAAACSaOInpX2kE6uf7"
+     data-theme="dark"
+     data-size="normal"></div>
+        <input type="hidden" name="cf-turnstile-response" id="cf-turnstile-response">
+          <button type="submit" class="btn btn-primary btn-lg w-100">Get My Quote</button>
         <p class="text-center text-muted small mt-3">We'll reply within 1–24 hours. Your info is used only for the quote – secure via Formspree.</p>
       </div>
     </div>
