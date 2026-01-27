@@ -68,7 +68,7 @@
           <li>Antivirus & Virus Scan: Full-system sweeps with premium engines (e.g., ESET, Malwarebytes)</li>
           <li>Real-time monitoring for computers, servers, & mobiles</li>
         </ul>
-        <p class="fw-bold">Starting at $49 one-time scan | Free initial assessment</p>
+        <p class="fw-bold">Starting at $5 one-time scan | Free initial assessment</p>
       </div>
     </div>
   </div>
@@ -204,13 +204,48 @@
           <td>All-in-One Security Maintenance</td>
           <td>Monthly scans (rootkit/trojan/antivirus), updates, backups, monitoring, support + discounts on unlocks/repairs</td>
           <td>$0 (no setup fee for subscribers)</td>
-          <td>$19.99/device<br><small>Family (3+ devices): $49.99 total</small><br><small>Business (5+): Custom quote</small></td>
+          <td>$8/device<br><small>Family $15</small><br><small>Business (5+): Custom quote</small></td>
           <td>Best value – cancel anytime</td>
         </tr>
       </tbody>
     </table>
   </div>
+<!-- Stripe Subscription Section -->
+<div class="text-center my-5">
+  <h3 class="text-primary mb-3">Subscribe to Monthly Protection</h3>
+  <p class="lead mb-4">$19.99 per device / month – Cancel anytime. Secure checkout via Stripe.</p>
+  
+  <button id="subscribeBtn" class="btn btn-primary btn-lg px-5">
+    Subscribe Now – $19.99/mo
+  </button>
+</div>
 
+<script>
+  // Replace with YOUR keys and price ID
+  const stripe = Stripe('pk_test_YOUR_PUBLISHABLE_KEY_HERE'); // ← paste your pk_test_ key
+  const priceId = 'price_YOUR_PRICE_ID_HERE';               // ← paste price_1... ID
+
+  document.getElementById('subscribeBtn').addEventListener('click', async () => {
+    try {
+      const { error } = await stripe.redirectToCheckout({
+        lineItems: [{ price: priceId, quantity: 1 }],
+        mode: 'subscription',
+        successUrl: 'https://unlockmxpro.com/success.html',
+        cancelUrl: 'https://unlockmxpro.com/cancel.html',
+        // Optional: prefill customer email if you have it
+        // customerEmail: 'customer@example.com',
+      });
+
+      if (error) {
+        alert(error.message);
+        console.error(error);
+      }
+    } catch (err) {
+      console.error('Checkout error:', err);
+      alert('Something went wrong. Please try again or contact us.');
+    }
+  });
+</script>
   <p class="text-center mt-4 small text-muted">Prices subject to change. Taxes may apply. Contact for custom quotes or bundled packages.</p>
 </section>
 <!-- Call to Action -->
