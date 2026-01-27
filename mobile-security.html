@@ -66,6 +66,44 @@
 
   <!-- Bootstrap JS CDN -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+  // Set initial language
+  function setLanguage(lang) {
+    document.body.setAttribute('data-lang', lang);
+    localStorage.setItem('preferredLanguage', lang);
+
+    // Update dropdown text
+    const toggle = document.getElementById('langDropdown');
+    if (toggle) {
+      toggle.innerHTML = `<i class="fas fa-globe me-1"></i> ${lang === 'es' ? 'Español' : 'English'}`;
+    }
+  }
+
+  // On page load
+  document.addEventListener('DOMContentLoaded', () => {
+    let lang = localStorage.getItem('preferredLanguage');
+
+    // Auto-detect if no preference saved
+    if (!lang) {
+      if (navigator.language.startsWith('es')) {
+        lang = 'es';
+      } else {
+        lang = 'en';
+      }
+    }
+
+    setLanguage(lang);
+
+    // Handle clicks on switcher links
+    document.querySelectorAll('.lang-switch').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const newLang = link.dataset.lang;
+        setLanguage(newLang);
+      });
+    });
+  });
+</script>
 </body>
 </html>
 <h2>Mobile Device Endpoint Security</h2>
