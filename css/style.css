@@ -1,4 +1,10 @@
 <style>
+  .es { display: none; }
+  /* When Spanish is active, flip visibility */
+  body[data-lang="es"] .en { display: none !important; }
+  body[data-lang="es"] .es { display: inline !important; } /* or block/flex as needed */
+</style>
+<style>
   .form-control.is-valid {
     border-color: #198754 !important;
     background-image: none; /* Remove default check icon if unwanted */
