@@ -177,7 +177,7 @@
           <td>Advanced Malware Scanning</td>
           <td><i class="fas fa-bug me-2"></i>Advanced Malware Scanning</td>
           <td>Rootkit, Trojan, Virus/Antivirus full scan + removal</td>
-          <td>Starting at $4.99/device (ad-on mobiles devices $1.5)</td>
+          <td>Starting at $5/device (ad-on mobiles devices $1.5)</td>
           <td>Autonomous daily scan</td>
         </tr>
 
@@ -186,7 +186,7 @@
           <td>Premium Device Protection</td>
           <td>Endpoint hardening, EDR setup, encryption, real-time monitoring (per device)</td>
           <td>$0 setup fee</td>
-          <td>$14.99/device (includes 3 mobile devices) </td>
+          <td>$15/device (includes 3 mobile devices) </td>
           <td>Includes ongoing updates & priority support</td>
         </tr>
 
@@ -228,33 +228,6 @@
     Subscribe Now – $5/mo
   </button>
 </div>
-
-<script>
-  // Replace with YOUR keys and price ID
-  const stripe = Stripe(pk_test_51Su0fNHNYPEutGml5B0b5EQdGMURFavoz3OyTeHWDJBiKGRQVpx7zm15Ee0n6wruihZQBwT1fBqhaqGTaN9zosdz00GR5Q4JLF); // ← paste your pk_test_ key
-  const priceId = 'prod_TrkQFqN0PYKOvw';               // ← paste price_1... ID
-
-  document.getElementById('subscribeBtn').addEventListener('click', async () => {
-    try {
-      const { error } = await stripe.redirectToCheckout({
-        lineItems: [{ price: priceId, quantity: 1 }],
-        mode: 'subscription',
-        successUrl: 'https://unlockmxpro.com/success.html',
-        cancelUrl: 'https://unlockmxpro.com/cancel.html',
-        // Optional: prefill customer email if you have it
-        // customerEmail: 'customer@example.com',
-      });
-
-      if (error) {
-        alert(error.message);
-        console.error(error);
-      }
-    } catch (err) {
-      console.error('Checkout error:', err);
-      alert('Something went wrong. Please try again or contact us.');
-    }
-  });
-</script>
   <p class="text-center mt-4 small text-muted">Prices subject to change. Taxes may apply. Contact for custom quotes or bundled packages.</p>
 </section>
 <!-- Call to Action -->
@@ -290,6 +263,47 @@
 </section>
 
 <!-- Subscription Form Placeholder (Integrate Stripe later) -->
+    <!-- Add this ONCE in <head> if not already there (or before </body>) -->
+<script src="https://js.stripe.com/v3/"></script>
+
+<!-- Stripe Subscription Button Section -->
+<div class="text-center my-5 py-4 bg-gradient bg-dark border-top border-bottom border-primary rounded">
+  <h3 class="text-primary mb-3">Subscribe to Monthly Protection</h3>
+  <p class="lead mb-4">$19.99 per device / month – Full scans, updates, backups & support. Cancel anytime via Stripe portal.</p>
+  
+  <button id="subscribeMonthly" class="btn btn-primary btn-lg px-5 py-3 fw-bold">
+    Subscribe Now – $19.99/mo
+  </button>
+  
+  <p class="text-muted small mt-3">Powered by Stripe • Secure • Orlando locals: email us after for setup help.</p>
+</div>
+
+<script>
+  // REPLACE THESE TWO LINES WITH YOUR VALUES
+  const stripe = Stripe('pk_test_51Su0fNHNYPEutGml5B0b5EQdGMURFavoz3OyTeHWDJBiKGRQVpx7zm15Ee0n6wruihZQBwT1fBqhaqGTaN9zosdz00GR5Q4JLF');  // ← your pk_test_... (test) or pk_live_... (live)
+  const priceId = 'prod_TrkQFqN0PYKOvw';                  // ← price_1... from Stripe product
+
+  document.getElementById('subscribeMonthly').addEventListener('click', async () => {
+    try {
+      const { error } = await stripe.redirectToCheckout({
+        lineItems: [{ price: priceId, quantity: 1 }],
+        mode: 'subscription',
+        successUrl: 'https://unlockmxpro.com/success.html?session_id={CHECKOUT_SESSION_ID}',
+        cancelUrl: 'https://unlockmxpro.com/cancel.html',
+        // Optional extras
+        billingAddressCollection: 'auto', // or 'required'
+      });
+
+      if (error) {
+        alert(error.message || 'Checkout error – try again or contact info@unlockmxpro.com');
+        console.error(error);
+      }
+    } catch (err) {
+      console.error('Stripe error:', err);
+      alert('Unable to load checkout. Please try again.');
+    }
+  });
+</script>
 <div id="subscribe" class="row justify-content-center">
   <div class="col-lg-6">
     <h3 class="text-center mb-4">Subscribe to Monthly Maintenance</h3>
