@@ -199,6 +199,83 @@
             <label for="message" class="form-label">Additional Notes (optional)</label>
             <textarea class="form-control bg-dark text-light border-primary" id="message" name="message" rows="3" placeholder="e.g., locked to AT&T, need for international travel"></textarea>
           </div>
+          <script>
+  // Luhn algorithm to validate IMEI check digit
+  function isValidIMEI(imei) {
+    imei = imei.trim().replace(/\D/g, ''); // Clean to digits only
+    if (imei.length !== 15 || !/^\d{15}$/.test(imei)) {
+      return false;
+    }
+
+    let sum = 0;
+    const digits = imei.split('').map(Number);
+    const checkDigit = digits.pop(); // Remove last digit (check digit)
+
+    // Double every second digit from the right (starting from the second-to-last)
+    for (let i = digits.length - 1; i >= 0; i--) {
+      let digit = digits[i];
+      if ((digits.length - i) % 2 === 1) {
+        digit *= 2;
+        if (digit > 9) digit -= 9;
+      }
+      sum += digit;
+    }
+
+    sum += checkDigit;
+    return sum % 10 === 0;
+  }
+
+  // Attach validation on page load
+  document.addEventListener('DOMContentLoaded', function () {
+    const form = document.querySelector('form');
+    const imeiInput = document.getElementById('imei');
+    const errorDiv = document.getElementById('imeiError');
+
+    if (!imeiInput || !form || !errorDiv) {
+      console.warn('IMEI validation elements not found');
+      return;
+    }
+
+    // Real-time validation as user types
+    imeiInput.addEventListener('input', function () {
+      const value = this.value.trim();
+      if (value.length === 0) {
+        this.classList.remove('is-valid', 'is-invalid');
+        errorDiv.textContent = '';
+        return;
+      }
+
+      if (value.length < 15) {
+        this.classList.remove('is-valid');
+        this.classList.add('is-invalid');
+        errorDiv.textContent = 'IMEI must be exactly 15 digits.';
+        return;
+      }
+
+      // Full 15 digits → check Luhn
+      if (isValidIMEI(value)) {
+        this.classList.remove('is-invalid');
+        this.classList.add('is-valid');
+        errorDiv.textContent = ''; // or "Valid IMEI" if you want positive feedback
+      } else {
+        this.classList.remove('is-valid');
+        this.classList.add('is-invalid');
+        errorDiv.textContent = 'Invalid IMEI (failed Luhn check digit validation).';
+      }
+    });
+
+    // Prevent submit if invalid (extra safety)
+    form.addEventListener('submit', function (e) {
+      const value = imeiInput.value.trim();
+      if (!isValidIMEI(value)) {
+        e.preventDefault();
+        imeiInput.classList.add('is-invalid');
+        errorDiv.textContent = 'Please correct the IMEI before submitting.';
+        imeiInput.focus();
+      }
+    });
+  });
+</script>
 <!-- Cloudflare Turnstile CAPTCHA -->
 <div class="cf-turnstile mb-3" 
      data-sitekey="0x4AAAAAACSaOInpX2kE6uf7" 
