@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">  <!-- Dark mode by default – cyber vibe -->
 <head>
+  <script src="https://www.paypal.com/sdk/js?client-id=Adpn7h8rOEWptyBcoknYAcY6uSwtFyydRwqwif4O1bZ1CmxtAsQScrlKSOwzzOvF7KKqeV9AOj3rTgoI&vault&components=buttons&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
   <script src="https://js.stripe.com/v3/"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -156,6 +157,46 @@
   <a href="mailto:info@unlockmxpro.com?subject=Pricing Inquiry" class="btn btn-primary btn-lg me-3">Get Custom Quote</a>
   <a href="#subscribe" class="btn btn-outline-primary btn-lg">Start Monthly Plan</a>
 </div>
+    <!-- PayPal Subscription Button -->
+<div class="text-center my-5 py-4 bg-dark border-top border-primary rounded">
+  <h3 class="text-primary mb-3">Subscribe to Monthly Protection</h3>
+  <p class="lead mb-4">$19.99 per device / month – Scans, updates, backups & support. Cancel anytime.</p>
+  
+  <div id="paypal-button-container" class="mt-3"></div>
+  
+  <p class="text-muted small mt-3">Powered by PayPal • Supports Venmo & cards • Orlando locals: contact us after subscribing.</p>
+</div>
+
+<script>
+  // REPLACE WITH YOUR PLAN ID
+  const planId = 'P-YOUR_PLAN_ID_HERE';  // ← P-2UF... from PayPal
+
+  paypal.Buttons({
+    style: {
+      shape: 'rect',
+      color: 'blue',      // blue, gold, silver, black
+      layout: 'vertical',
+      label: 'subscribe'
+    },
+    createSubscription: function(data, actions) {
+      return actions.subscription.create({
+        plan_id: planId
+      });
+    },
+    onApprove: function(data, actions) {
+      alert('Subscription successful! Subscription ID: ' + data.subscriptionID);
+      // Optional: Redirect to success page
+      window.location.href = '/success.html';
+    },
+    onCancel: function(data) {
+      alert('Subscription cancelled.');
+    },
+    onError: function(err) {
+      console.error('PayPal error:', err);
+      alert('An error occurred. Please try again or contact info@unlockmxpro.com');
+    }
+  }).render('#paypal-button-container');
+</script>
 <section class="my-5">
   <h2 class="text-primary text-center mb-4">Transparent Pricing</h2>
   <p class="text-center lead mb-5">All prices in USD. Orlando locals: Ask about in-person discounts or same-day service.</p>
