@@ -412,6 +412,33 @@
     });
   });
 </script>
+  <script>
+  // Example: Call on form submit (adapt to your form)
+  document.querySelector('form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const imei = document.getElementById('imei').value.trim();
+    const carrier = document.getElementById('carrier').value;
+
+    if (!imei || imei.length !== 15) {
+      alert('Enter valid 15-digit IMEI');
+      return;
+    }
+
+    try {
+      const response = await fetch(`https://unlockmx-api-proxy.unlockmxpro.workers.dev?imei=${imei}&carrier=${carrier}`);
+      if (!response.ok) throw new Error('Proxy error');
+
+      const data = await response.json();
+
+      // Show result (adapt to your UI)
+      alert(`Status: ${data.status || 'Unknown'}\nCarrier: ${data.carrier}\nUnlock eligible: ${data.unlockEligible ? 'Yes' : 'No'}`);
+      // Or update page: document.getElementById('result').textContent = JSON.stringify(data, null, 2);
+    } catch (err) {
+      alert('Error: ' + err.message);
+    }
+  });
+</script>
 </body>
 </html>
 <!-- Authorized Partners Logos -->
