@@ -1,54 +1,80 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <!-- All your head stuff here -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contáctanos para cotizaciones, auditorías gratuitas o soporte en ciberseguridad y desbloqueos. Orlando, FL.">
+  <title>Contacto - UnlockMxPro</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  
+  <!-- Font Awesome para íconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container">
-    <a class="navbar-brand" href="index.html">UnlockMxPro</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-        <li class="nav-item"><a class="nav-link" href="ciberseguridad.html">Ciberseguridad</a></li>
-        <li class="nav-item"><a class="nav-link" href="desbloqueos.html">Desbloqueos y Reparaciones</a></li>
-        <li class="nav-item"><a class="nav-link" href="planes.html">Planes</a></li>
-        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
-      </ul>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">UnlockMxPro</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="ciberseguridad.html">Ciberseguridad</a></li>
+          <li class="nav-item"><a class="nav-link" href="desbloqueos.html">Desbloqueos</a></li>
+          <li class="nav-item"><a class="nav-link" href="planes.html">Planes</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
-  <footer class="bg-dark text-white text-center py-4 mt-5">
-  <div class="container">
-    <p>&copy; 2026 UnlockMxPro | Orlando, FL | Expertos en Ciberseguridad y Desbloqueos Seguros</p>
-    <p>Tel: [tu número] | Email: unlockmxpro@gmail.com | WhatsApp: <a href="https://wa.me/+1tu-numero" class="text-white">Contáctanos</a></p>
-    <div>
-      <a href="https://www.facebook.com/people/Unlock-Mx-Pro-Soluciones-Sim/100063644769403/" class="text-white mx-2"><i class="fab fa-facebook fa-2x"></i></a>
-      <!-- Agrega más redes si tienes -->
+  </nav>
+
+  <!-- Hero Section (más sencilla para página de contacto) -->
+  <section class="hero bg-primary text-white text-center py-5" style="padding-top: 100px;">
+    <div class="container">
+      <h1 class="display-5 fw-bold mb-4">Contáctanos Hoy</h1>
+      <p class="lead mb-4">Estamos listos para ayudarte con cotizaciones, auditorías gratuitas o cualquier consulta</p>
     </div>
-  </div>
-</footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container">
-    <a class="navbar-brand" href="index.html">UnlockMxPro</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-        <li class="nav-item"><a class="nav-link" href="ciberseguridad.html">Ciberseguridad</a></li>
-        <li class="nav-item"><a class="nav-link" href="desbloqueos.html">Desbloqueos y Reparaciones</a></li>
-        <li class="nav-item"><a class="nav-link" href="planes.html">Planes</a></li>
-        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+  </section>
+
+  <!-- Información de Contacto + Formulario -->
+  <section class="container py-5 my-5">
+    <div class="row g-5">
+      <!-- Columna Izquierda: Datos de contacto -->
+      <div class="col-lg-5">
+        <h3 class="mb-4">Información de Contacto</h3>
+        
+        <ul class="list-unstyled mb-5">
+          <li class="mb-4">
+            <i class="fas fa-phone-alt fa-lg me-3 text-primary"></i>
+            <strong>Teléfono / WhatsApp:</strong><br>
+            <a href="https://wa.me/+1407TU-NUMERO" class="text-decoration-none">+1 (407) TU-NÚMERO</a>
+          </li>
+          <li class="mb-4">
+            <i class="fas fa-envelope fa-lg me-3 text-primary"></i>
+            <strong>Email:</strong><br>
+            <a href="mailto:unlockmxpro@gmail.com" class="text-decoration-none">unlockmxpro@gmail.com</a>
+          </li>
+          <li class="mb-4">
+            <i class="fas fa-map-marker-alt fa-lg me-3 text-primary"></i>
+            <strong>Dirección (Orlando, FL):</strong><br>
+            [Tu dirección completa o zona, ej: Central Florida – Servicio en Orlando y alrededores]
+          </li>
+        </ul>
+
+        <h5 class="mb-3">Horarios de Atención</h5>
+        <p class="text-muted">
+          Lunes a Viernes: 9:00 AM – 7:00 PM<br>
+          Sábados: 10:00 AM – 4:00 PM<br>
+          Domingos: Cerrado (emergencias por WhatsApp)
+        </p>
+
+        <!-- Opcional: Mapa de Google -->
+        <div class="mt-4">
+          <h5 class="mb-3">Encuéntranos</h5>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3508.123456789!2d-81.XXXXXX!3d28.XXXXXX!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjDCsDI3JzAwLjAiTiA4McKwMzAnMDAuMCJX!5e0!3m2!1ses!2sus!4vXXXXXXXXXXXX!5m2!1ses!2sus" 
+                  width="100%" height="250" style="border:
