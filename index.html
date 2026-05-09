@@ -3,149 +3,242 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Ciberseguridad avanzada y desbloqueos seguros de celulares. Protección contra malware, ransomware y más. Servicio en Orlando y México.">
-  <title>UnlockMxPro - Ciberseguridad y Soluciones Móviles</title>
-
-  <!-- Favicon -->
+  <meta name="description" content="Ciberseguridad avanzada y desbloqueos seguros de celulares. Protección ThreatDown contra malware, ransomware y más. Orlando FL y México.">
+  <title>UnlockMxPro — Ciberseguridad y Soluciones Móviles</title>
   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="img/android-chrome-192x192.png">
   <link rel="manifest" href="img/site.webmanifest">
-
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
-        rel="stylesheet" 
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
-        crossorigin="anonymous">
-
-  <!-- Font Awesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">UnlockMxPro</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="ciberseguridad.html">Ciberseguridad</a></li>
-          <li class="nav-item"><a class="nav-link" href="desbloqueos.html">Desbloqueos</a></li>
-          <li class="nav-item"><a class="nav-link" href="planes.html">Planes</a></li>
-          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="container">
+    <a class="logo" href="index.html">Unlock<span>MxPro</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Inicio</a></li>
+      <li><a href="ciberseguridad.html">Ciberseguridad</a></li>
+      <li><a href="desbloqueos.html">Desbloqueos</a></li>
+      <li><a href="planes.html">Planes</a></li>
+      <li><a href="contacto.html" class="btn-nav">Cotización</a></li>
+    </ul>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">🛡️ Partner Autorizado de ThreatDown</div>
+      <h1>Protección Digital<br><span class="gradient-text">Para Tu Negocio y Hogar</span></h1>
+      <p>Ciberseguridad avanzada con ThreatDown + desbloqueos y reparaciones de celulares. Servicio profesional en Orlando FL y México.</p>
+      <div class="hero-buttons">
+        <a href="contacto.html" class="btn-primary">Cotización Gratuita</a>
+        <a href="#servicios" class="btn-secondary">Ver Servicios</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span>24/7</span><p>Soporte</p></div>
+        <div class="stat"><span>100%</span><p>Protegido</p></div>
+        <div class="stat"><span>+500</span><p>Clientes</p></div>
+        <div class="stat"><span>$0</span><p>Costo Auditoría</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios" class="services">
+  <div class="container">
+    <div class="section-header">
+      <h2>Nuestros <span class="gradient-text">Servicios</span></h2>
+      <p>Soluciones completas de seguridad y tecnología móvil</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
+        <h3>Ciberseguridad Avanzada</h3>
+        <p>Antivirus de última generación, protección contra ransomware, exploits y amenazas web en tiempo real con ThreatDown.</p>
+        <a href="ciberseguridad.html">Ver detalles →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+        <h3>Desbloqueos y Reparaciones</h3>
+        <p>Liberación de SIM, eSIM, IMEI, bypass FRP, cambio de pantalla, batería y piezas originales. Rápido y confiable.</p>
+        <a href="desbloqueos.html">Solicitar →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-eye"></i></div>
+        <h3>Monitoreo Continuo</h3>
+        <p>Escaneos automáticos 24/7, detección proactiva de amenazas y alertas en tiempo real para tus dispositivos.</p>
+        <a href="planes.html">Ver planes →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-network-wired"></i></div>
+        <h3>Protección de Red</h3>
+        <p>Filtrado DNS, protección web y seguridad perimetral para tu hogar o negocio contra intrusiones externas.</p>
+        <a href="contacto.html">Consultar →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-cloud-upload-alt"></i></div>
+        <h3>Backup y Recuperación</h3>
+        <p>Copias de seguridad automáticas y planes de recuperación ante ransomware o pérdida de datos críticos.</p>
+        <a href="planes.html">Ver planes →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-headset"></i></div>
+        <h3>Soporte Prioritario</h3>
+        <p>Atención personalizada vía WhatsApp, email o llamada. Respuesta rápida ante incidentes de seguridad.</p>
+        <a href="contacto.html">Contactar →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THREATDOWN -->
+<section class="dark-section">
+  <div class="container">
+    <div class="two-col">
+      <div class="two-col-text">
+        <div class="hero-badge" style="margin-bottom:20px;">Partner Autorizado</div>
+        <h2 style="color:var(--white); font-size:2rem; font-weight:800; margin-bottom:16px;">ThreatDown<br><span class="gradient-text">by Malwarebytes</span></h2>
+        <p style="color:#94a3b8; margin-bottom:24px;">Somos partner autorizado de ThreatDown, la plataforma de seguridad endpoint empresarial impulsada por Malwarebytes. Protección real para negocios y hogares a precios accesibles.</p>
+        <ul class="feature-list">
+          <li><i class="fas fa-check"></i> Antivirus y anti-ransomware de próxima generación</li>
+          <li><i class="fas fa-check"></i> Filtrado DNS y protección web</li>
+          <li><i class="fas fa-check"></i> EDR con análisis de comportamiento</li>
+          <li><i class="fas fa-check"></i> Rollback de ransomware (7 días)</li>
+          <li><i class="fas fa-check"></i> Gestión centralizada en la nube</li>
+        </ul>
+        <a href="planes.html" class="btn-primary">Ver Planes ThreatDown</a>
+      </div>
+      <div style="display:flex; justify-content:center; align-items:center;">
+        <div style="width:240px; height:240px; border-radius:50%; background:rgba(37,99,235,0.15); border:2px solid rgba(56,189,248,0.3); display:flex; flex-direction:column; align-items:center; justify-content:center;">
+          <i class="fas fa-shield-alt" style="font-size:5rem; color:var(--accent); margin-bottom:12px;"></i>
+          <span style="font-size:0.85rem; font-weight:700; color:var(--accent); letter-spacing:3px;">PROTEGIDO</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PLANES RESUMEN -->
+<section class="pricing">
+  <div class="container">
+    <div class="section-header">
+      <h2>Planes <span class="gradient-text">de Protección</span></h2>
+      <p>Tres niveles de seguridad profesional. Sin costos ocultos.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <div class="pricing-header">
+          <h3>Essential</h3>
+          <div class="price"><span>$71.99</span>/endpoint/mes</div>
+        </div>
+        <ul>
+          <li><i class="fas fa-check"></i> Next-Gen AV + Anti-ransomware</li>
+          <li><i class="fas fa-check"></i> Protección web en tiempo real</li>
+          <li><i class="fas fa-check"></i> Bloqueo de exploits</li>
+          <li><i class="fas fa-check"></i> Remediación end-to-end</li>
+        </ul>
+        <a href="contacto.html" class="btn-outline">Elegir Essential</a>
+      </div>
+      <div class="pricing-card featured">
+        <div class="popular-badge">Recomendado</div>
+        <div class="pricing-header">
+          <h3>Advanced</h3>
+          <div class="price"><span>$91.99</span>/endpoint/mes</div>
+        </div>
+        <ul>
+          <li><i class="fas fa-check"></i> Todo de Essential</li>
+          <li><i class="fas fa-check"></i> EDR con IA y comportamiento</li>
+          <li><i class="fas fa-check"></i> Rollback de ransomware 7 días</li>
+          <li><i class="fas fa-check"></i> Aislamiento de dispositivo</li>
+        </ul>
+        <a href="contacto.html" class="btn-primary">Elegir Advanced</a>
+      </div>
+      <div class="pricing-card">
+        <div class="pricing-header">
+          <h3>24/7 MDR</h3>
+          <div class="price"><span>$119.99</span>/endpoint/mes</div>
+        </div>
+        <ul>
+          <li><i class="fas fa-check"></i> Todo de Advanced</li>
+          <li><i class="fas fa-check"></i> SOC humano 24/7/365</li>
+          <li><i class="fas fa-check"></i> Threat hunting proactivo</li>
+          <li><i class="fas fa-check"></i> Respuesta activa de expertos</li>
+        </ul>
+        <a href="contacto.html" class="btn-outline">Elegir MDR</a>
+      </div>
+    </div>
+    <p class="pricing-note">Precios por endpoint/mes. <a href="planes.html" style="color:var(--primary);">Ver todos los detalles →</a></p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band">
+  <div class="container">
+    <h2>¿Listo para proteger tus dispositivos?</h2>
+    <p>Auditoría gratuita sin compromiso. Te contactamos en menos de 24 horas.</p>
+    <a href="contacto.html" class="btn-white">Contáctanos Ahora</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="logo" href="index.html">Unlock<span>MxPro</span></a>
+        <p>Ciberseguridad avanzada y soluciones móviles para particulares y pequeños negocios en Orlando FL y México.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/people/Unlock-Mx-Pro-Soluciones-Sim/100063644769403/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://wa.me/+524661470586" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          <a href="mailto:unlockmxpro@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="ciberseguridad.html">Ciberseguridad</a></li>
+          <li><a href="desbloqueos.html">Desbloqueos</a></li>
+          <li><a href="desbloqueos.html">Reparaciones</a></li>
+          <li><a href="planes.html">Planes Mensuales</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Empresa</h4>
+        <ul>
+          <li><a href="nosotros">Nosotros</a></li>
+          <li><a href="planes.html">Precios</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="ciberseguridad.html">ThreatDown Partner</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="mailto:unlockmxpro@gmail.com">unlockmxpro@gmail.com</a></li>
+          <li><a href="https://wa.me/+524661470586">+52 466 147 0586</a></li>
+          <li><a href="#">Orlando, FL</a></li>
+          <li><a href="#">Salvatierra, Gto. MX</a></li>
         </ul>
       </div>
     </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <section class="hero text-white text-center d-flex align-items-center" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1555949963-aa79d0ebc8fb?auto=format&fit=crop&q=80') center/cover no-repeat; min-height: 80vh; padding-top: 100px;">
-    <div class="container">
-      <h1 class="display-3 fw-bold mb-4">Unlock Stronger Protection</h1>
-      <p class="lead fs-4 mb-5">Ciberseguridad avanzada para tus dispositivos + desbloqueos y reparaciones seguras de celulares</p>
-      <a href="contacto.html" class="btn btn-primary btn-lg px-5 py-3">Cotización Gratuita</a>
+    <div class="footer-bottom">
+      <p>&copy; 2026 UnlockMxPro. Todos los derechos reservados.</p>
+      <p>ThreatDown es marca registrada de Malwarebytes Inc.</p>
     </div>
-  </section>
+  </div>
+</footer>
 
-  <!-- Bienvenida -->
-  <section class="container py-5 my-5">
-    <div class="row justify-content-center">
-      <div class="col-lg-10 text-center">
-        <h2 class="mb-4">Bienvenido a UnlockMxPro</h2>
-        <p class="lead text-muted">
-          Combinamos protección de última generación contra malware, ransomware y amenazas digitales con desbloqueos confiables de celulares y reparaciones rápidas.
-        </p>
-        <p>
-          Planes accesibles, servicio local y atención personalizada para particulares y pequeños negocios.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Servicios Principales -->
-  <section class="bg-light py-5">
-    <div class="container">
-      <h2 class="text-center mb-5">Nuestros Servicios</h2>
-      <div class="row g-4">
-        <!-- Card 1 -->
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm border-0 text-center">
-            <div class="card-body p-5">
-              <i class="fas fa-shield-alt fa-4x text-primary mb-4"></i>
-              <h4 class="card-title">Ciberseguridad Avanzada</h4>
-              <p class="card-text text-muted">
-                Antivirus de última generación con detección predictiva, bloqueo proactivo y protección contra ransomware, exploits y amenazas web en tiempo real.
-              </p>
-              <a href="ciberseguridad.html" class="btn btn-outline-primary">Ver detalles</a>
-            </div>
-          </div>
-        </div>
-        <!-- Card 2 -->
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm border-0 text-center">
-            <div class="card-body p-5">
-              <i class="fas fa-mobile-alt fa-4x text-primary mb-4"></i>
-              <h4 class="card-title">Desbloqueos y Reparaciones</h4>
-              <p class="card-text text-muted">
-                Liberación segura de SIM, eSIM, IMEI, bypass FRP, cambio de pantalla, batería y piezas originales. Servicio rápido y confiable.
-              </p>
-              <a href="desbloqueos.html" class="btn btn-outline-primary">Solicitar</a>
-            </div>
-          </div>
-        </div>
-        <!-- Card 3 -->
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm border-0 text-center">
-            <div class="card-body p-5">
-              <i class="fas fa-calendar-check fa-4x text-primary mb-4"></i>
-              <h4 class="card-title">Planes Mensuales</h4>
-              <p class="card-text text-muted">
-                Desde <strong>$54.99 MXP por dispositivo/mes</strong>. Escaneos continuos, actualizaciones automáticas, backups y soporte prioritario.
-              </p>
-              <a href="planes.html" class="btn btn-outline-primary">Ver planes</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA Final -->
-  <section class="container text-center py-5 my-5">
-    <h3 class="mb-4">¿Listo para proteger tus dispositivos?</h3>
-    <p class="lead text-muted mb-4">Obtén una auditoría gratuita o cotización sin compromiso</p>
-    <a href="contacto.html" class="btn btn-primary btn-lg px-5">Contáctanos Ahora</a>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-dark text-white text-center py-4">
-    <div class="container">
-      <p class="mb-2">&copy; 2025 UnlockMxPro. Todos los derechos reservados.</p>
-      <p class="mb-3">
-        Salvatierra, Guanajuato | Email: unlockmxpro@gmail.com
-      </p>
-      <div>
-        <a href="https://www.facebook.com/people/Unlock-Mx-Pro-Soluciones-Sim/100063644769403/" class="text-white mx-3" target="_blank">
-          <i class="fab fa-facebook fa-2x"></i>
-        </a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Bootstrap JS (al FINAL del body) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
-          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
-          crossorigin="anonymous"></script>
-
-  <!-- WhatsApp flotante -->
-  <a href="https://wa.me/+524661470586?text=Hola%20UnlockMxPro,%20quiero%20una%20cotización%20gratuita"
-     style="position: fixed; bottom: 25px; right: 25px; z-index: 1000;">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="65" class="shadow rounded-circle">
-  </a>
+<!-- WhatsApp flotante -->
+<a href="https://wa.me/+524661470586?text=Hola%20UnlockMxPro,%20quiero%20una%20cotización%20gratuita" class="wa-float" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
 
 </body>
 </html>

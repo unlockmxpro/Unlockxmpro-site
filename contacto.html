@@ -1,90 +1,158 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <!-- Favicon básico -->
-<link rel="icon" href="img/favicon.ico" type="image/x-icon">
-
-<!-- Para iOS / Apple Touch -->
-<link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
-
-<!-- Para Android Chrome -->
-<link rel="icon" type="image/png" sizes="192x192" href="img/android-chrome-192x192.png">
-
-<!-- Manifest (opcional pero recomendado) -->
-<link rel="manifest" href="img/site.webmanifest">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Contáctanos para cotizaciones, auditorías gratuitas o soporte en ciberseguridad y desbloqueos. Orlando, FL.">
-  <title>Contacto - UnlockMxPro</title>
-
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  
-  <!-- Font Awesome para íconos -->
+  <meta name="description" content="Contáctanos para cotizaciones, auditorías gratuitas o soporte en ciberseguridad y desbloqueos. Orlando FL y México.">
+  <title>Contacto — UnlockMxPro</title>
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">UnlockMxPro</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="ciberseguridad.html">Ciberseguridad</a></li>
-          <li class="nav-item"><a class="nav-link" href="desbloqueos.html">Desbloqueos</a></li>
-          <li class="nav-item"><a class="nav-link" href="planes.html">Planes</a></li>
-          <li class="nav-item"><a class="nav-link active" href="contacto.html">Contacto</a></li>
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="container">
+    <a class="logo" href="index.html">Unlock<span>MxPro</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="ciberseguridad.html">Ciberseguridad</a></li>
+      <li><a href="desbloqueos.html">Desbloqueos</a></li>
+      <li><a href="planes.html">Planes</a></li>
+      <li><a href="contacto.html" class="btn-nav active">Cotización</a></li>
+    </ul>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <h1>Contáctanos <span class="gradient-text">Hoy</span></h1>
+    <p>Auditoría gratuita sin compromiso. Te respondemos en menos de 24 horas.</p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Información de Contacto</h3>
+        <p>Estamos listos para ayudarte con ciberseguridad, desbloqueos o cualquier consulta tecnológica.</p>
+        <div class="contact-items">
+          <div class="contact-item">
+            <i class="fab fa-whatsapp"></i>
+            <div>
+              <strong>WhatsApp / Teléfono</strong><br>
+              <a href="https://wa.me/+524661470586">+52 466 147 0586</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <strong>Email</strong><br>
+              <a href="mailto:unlockmxpro@gmail.com">unlockmxpro@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <strong>Ubicaciones</strong><br>
+              <span>Orlando, FL | Salvatierra, Guanajuato MX</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fab fa-facebook-f"></i>
+            <div>
+              <strong>Facebook</strong><br>
+              <a href="https://www.facebook.com/people/Unlock-Mx-Pro-Soluciones-Sim/100063644769403/" target="_blank">UnlockMxPro</a>
+            </div>
+          </div>
+        </div>
+        <div class="hours">
+          <h4>Horarios de Atención</h4>
+          <p>
+            Lunes – Viernes: 9:00 AM – 7:00 PM<br>
+            Sábados: 10:00 AM – 4:00 PM<br>
+            Domingos: Emergencias por WhatsApp
+          </p>
+        </div>
+      </div>
+
+      <form class="contact-form" action="https://formspree.io/f/unlockmxpro@gmail.com" method="POST">
+        <div class="form-row">
+          <input type="text" name="nombre" placeholder="Tu Nombre" required>
+          <input type="email" name="email" placeholder="Correo Electrónico" required>
+        </div>
+        <input type="tel" name="telefono" placeholder="Teléfono / WhatsApp (opcional)">
+        <select name="servicio" required>
+          <option value="">¿En qué podemos ayudarte?</option>
+          <option>Ciberseguridad / Antivirus ThreatDown</option>
+          <option>Desbloqueo de celular (SIM / IMEI)</option>
+          <option>Bypass FRP / Google Account</option>
+          <option>Reparación de celular</option>
+          <option>Plan mensual de protección</option>
+          <option>Auditoría de seguridad gratuita</option>
+          <option>Otro</option>
+        </select>
+        <textarea name="mensaje" placeholder="Cuéntanos más sobre lo que necesitas..." rows="5" required></textarea>
+        <button type="submit" class="btn-primary">Enviar Mensaje <i class="fas fa-paper-plane" style="margin-left:8px;"></i></button>
+        <p style="font-size:0.82rem; color:var(--text-light); margin-top:8px;">O escríbenos directo por <a href="https://wa.me/+524661470586" style="color:var(--primary);">WhatsApp</a> para respuesta inmediata.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="logo" href="index.html">Unlock<span>MxPro</span></a>
+        <p>Ciberseguridad avanzada y soluciones móviles para particulares y pequeños negocios.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/people/Unlock-Mx-Pro-Soluciones-Sim/100063644769403/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://wa.me/+524661470586" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          <a href="mailto:unlockmxpro@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="ciberseguridad.html">Ciberseguridad</a></li>
+          <li><a href="desbloqueos.html">Desbloqueos</a></li>
+          <li><a href="planes.html">Planes Mensuales</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Empresa</h4>
+        <ul>
+          <li><a href="nosotros">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="mailto:unlockmxpro@gmail.com">unlockmxpro@gmail.com</a></li>
+          <li><a href="https://wa.me/+524661470586">+52 466 147 0586</a></li>
+          <li><a href="#">Orlando, FL | Salvatierra, Gto.</a></li>
         </ul>
       </div>
     </div>
-  </nav>
-
-  <!-- Hero Section (más sencilla para página de contacto) -->
-  <section class="hero bg-primary text-white text-center py-5" style="padding-top: 100px;">
-    <div class="container">
-      <h1 class="display-5 fw-bold mb-4">Contáctanos Hoy</h1>
-      <p class="lead mb-4">Estamos listos para ayudarte con cotizaciones, auditorías gratuitas o cualquier consulta</p>
+    <div class="footer-bottom">
+      <p>&copy; 2026 UnlockMxPro. Todos los derechos reservados.</p>
+      <p>ThreatDown es marca registrada de Malwarebytes Inc.</p>
     </div>
-  </section>
+  </div>
+</footer>
 
-  <!-- Información de Contacto + Formulario -->
-  <section class="container py-5 my-5">
-    <div class="row g-5">
-      <!-- Columna Izquierda: Datos de contacto -->
-      <div class="col-lg-5">
-        <h3 class="mb-4">Información de Contacto</h3>
-        
-        <ul class="list-unstyled mb-5">
-          <li class="mb-4">
-            <i class="fas fa-phone-alt fa-lg me-3 text-primary"></i>
-            <strong>Teléfono / WhatsApp:</strong><br>
-            <a href="https://wa.me/+524661470586" class="text-decoration-none">+52 466 147 0586</a>
-          </li>
-          <li class="mb-4">
-            <i class="fas fa-envelope fa-lg me-3 text-primary"></i>
-            <strong>Email:</strong><br>
-            <a href="mailto:unlockmxpro@gmail.com" class="text-decoration-none">unlockmxpro@gmail.com</a>
-        
-          <li class="mb-4">
-            <i class="fas fa-map-marker-alt fa-lg me-3 text-primary"></i>
-            <strong>:</strong><br
-          </li>
-        </ul>
+<a href="https://wa.me/+524661470586?text=Hola%20UnlockMxPro,%20quiero%20una%20cotización" class="wa-float" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
 
-        <h5 class="mb-3">Horarios de Atención</h5>
-        <p class="text-muted">
-          Lunes a Viernes: 9:00 AM – 7:00 PM<br>
-          Sábados: 10:00 AM – 4:00 PM<br>
-          Domingos: Cerrado (emergencias por WhatsApp)
-        </p>
-
-        <!-- Opcional: Mapa de Google -->
-        <div class="mt-4">
-          <h5 class="mb-3">Encuéntranos</h5>
-          <iframe src="<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29952.695315351448!2d-100.87628495!3d20.21370905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842cdb0b15614127%3A0x53803125936ee357!2s38900%20Salvatierra%2C%20Guanajuato%2C%20Mexico!5e0!3m2!1sen!2sus!4v1770341478669!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>" 
-                  width="100%" height="250" style="border:
+</body>
+</html>

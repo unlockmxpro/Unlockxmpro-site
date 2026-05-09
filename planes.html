@@ -3,189 +3,198 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Planes de protección endpoint: Essential, Advanced y 24/7 Expert Coverage. Ciberseguridad profesional con ThreatDown.">
-  <title>Planes de Protección - UnlockMxPro</title>
-
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  
-  <!-- Font Awesome -->
+  <meta name="description" content="Planes de protección endpoint: Essential, Advanced y 24/7 MDR. Ciberseguridad profesional con ThreatDown by Malwarebytes.">
+  <title>Planes — UnlockMxPro</title>
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">UnlockMxPro</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="ciberseguridad.html">Ciberseguridad</a></li>
-          <li class="nav-item"><a class="nav-link" href="desbloqueos.html">Desbloqueos</a></li>
-          <li class="nav-item"><a class="nav-link active" href="planes.html">Planes</a></li>
-          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="container">
+    <a class="logo" href="index.html">Unlock<span>MxPro</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="ciberseguridad.html">Ciberseguridad</a></li>
+      <li><a href="desbloqueos.html">Desbloqueos</a></li>
+      <li><a href="planes.html" class="active">Planes</a></li>
+      <li><a href="contacto.html" class="btn-nav">Cotización</a></li>
+    </ul>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="hero-badge" style="margin-bottom:20px;">🛡️ ThreatDown Partner Autorizado</div>
+    <h1>Planes de <span class="gradient-text">Protección Endpoint</span></h1>
+    <p>Tres niveles de seguridad profesional con ThreatDown. Escoge el que mejor se adapte a tus necesidades.</p>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing">
+  <div class="container">
+    <div class="pricing-grid">
+
+      <!-- Essential -->
+      <div class="pricing-card">
+        <div class="pricing-header">
+          <h3>Essential Real-Time</h3>
+          <div class="price">
+            <span>$71.99</span>/endpoint/mes<br>
+            <small style="color:var(--text-light);">Servidores: $288.99/mes</small>
+          </div>
+        </div>
+        <ul>
+          <li><i class="fas fa-check"></i> Next-Gen AV + Anti-ransomware</li>
+          <li><i class="fas fa-check"></i> Protección web en tiempo real</li>
+          <li><i class="fas fa-check"></i> Bloqueo de exploits y fuerza bruta</li>
+          <li><i class="fas fa-check"></i> Remediación end-to-end</li>
+          <li><i class="fas fa-check"></i> Detección predictiva con IA</li>
+          <li><i class="fas fa-check"></i> Reporte mensual de estado</li>
+        </ul>
+        <a href="contacto.html" class="btn-outline">Elegir Essential</a>
+      </div>
+
+      <!-- Advanced -->
+      <div class="pricing-card featured">
+        <div class="popular-badge">Recomendado</div>
+        <div class="pricing-header">
+          <h3>Advanced Threat Defense</h3>
+          <div class="price">
+            <span>$91.99</span>/endpoint/mes<br>
+            <small style="color:#64748b;">Servidores: $325.99/mes</small>
+          </div>
+        </div>
+        <ul>
+          <li><i class="fas fa-check"></i> Todo de Essential</li>
+          <li><i class="fas fa-check"></i> EDR con análisis de comportamiento e IA</li>
+          <li><i class="fas fa-check"></i> Rollback de ransomware (7 días)</li>
+          <li><i class="fas fa-check"></i> Aislamiento de dispositivo remoto</li>
+          <li><i class="fas fa-check"></i> Remote shell para respuesta rápida</li>
+          <li><i class="fas fa-check"></i> Soporte prioritario</li>
+        </ul>
+        <a href="contacto.html" class="btn-primary">Elegir Advanced</a>
+      </div>
+
+      <!-- MDR -->
+      <div class="pricing-card">
+        <div class="pricing-header">
+          <h3>24/7 Expert Coverage</h3>
+          <div class="price">
+            <span>$119.99</span>/endpoint/mes<br>
+            <small style="color:var(--text-light);">Add-on sobre Advanced</small>
+          </div>
+        </div>
+        <ul>
+          <li><i class="fas fa-check"></i> Todo de Advanced</li>
+          <li><i class="fas fa-check"></i> SOC humano 24/7/365</li>
+          <li><i class="fas fa-check"></i> Threat hunting proactivo</li>
+          <li><i class="fas fa-check"></i> Investigación de incidentes</li>
+          <li><i class="fas fa-check"></i> Respuesta activa por expertos</li>
+          <li><i class="fas fa-check"></i> Informes ejecutivos mensuales</li>
+        </ul>
+        <a href="contacto.html" class="btn-outline">Elegir MDR</a>
+      </div>
+
+    </div>
+    <p class="pricing-note">Precios aproximados por endpoint/mes (facturación mensual). Contáctanos para descuentos por volumen y cotización personalizada.</p>
+  </div>
+</section>
+
+<!-- COMPARACIÓN -->
+<section style="padding: 80px 0; background: var(--white);">
+  <div class="container">
+    <div class="section-header">
+      <h2>¿Qué incluye <span class="gradient-text">cada plan?</span></h2>
+      <p>Comparativa detallada de características</p>
+    </div>
+    <div class="icon-grid">
+      <div class="icon-card">
+        <i class="fas fa-virus-slash"></i>
+        <h3>Anti-Malware</h3>
+        <p>Todos los planes incluyen protección contra malware, spyware, adware y troyanos con detección en tiempo real.</p>
+      </div>
+      <div class="icon-card">
+        <i class="fas fa-lock"></i>
+        <h3>Anti-Ransomware</h3>
+        <p>Detección y bloqueo proactivo de ransomware antes de que cifre tus archivos. Rollback disponible en planes Advanced+.</p>
+      </div>
+      <div class="icon-card">
+        <i class="fas fa-globe"></i>
+        <h3>Protección Web</h3>
+        <p>Bloqueo de sitios maliciosos, phishing y descargas peligrosas en tiempo real mientras navegas.</p>
+      </div>
+      <div class="icon-card">
+        <i class="fas fa-brain"></i>
+        <h3>IA y Comportamiento</h3>
+        <p>Análisis comportamental con inteligencia artificial para detectar amenazas desconocidas (zero-day).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band">
+  <div class="container">
+    <h2>¿No sabes cuál plan elegir?</h2>
+    <p>Contáctanos y te asesoramos sin costo. Diseñamos la solución ideal para tu caso.</p>
+    <a href="contacto.html" class="btn-white">Asesoría Gratuita</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="logo" href="index.html">Unlock<span>MxPro</span></a>
+        <p>Ciberseguridad avanzada y soluciones móviles para particulares y pequeños negocios.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/people/Unlock-Mx-Pro-Soluciones-Sim/100063644769403/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://wa.me/+524661470586" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          <a href="mailto:unlockmxpro@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="ciberseguridad.html">Ciberseguridad</a></li>
+          <li><a href="desbloqueos.html">Desbloqueos</a></li>
+          <li><a href="planes.html">Planes Mensuales</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Empresa</h4>
+        <ul>
+          <li><a href="nosotros">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="mailto:unlockmxpro@gmail.com">unlockmxpro@gmail.com</a></li>
+          <li><a href="https://wa.me/+524661470586">+52 466 147 0586</a></li>
+          <li><a href="#">Orlando, FL | Salvatierra, Gto.</a></li>
         </ul>
       </div>
     </div>
-  </nav>
-
-  <!-- Hero -->
-  <section class="bg-primary text-white text-center py-5" style="padding-top: 100px;">
-    <div class="container">
-      <h1 class="display-4 fw-bold mb-4">Planes de Protección Endpoint</h1>
-      <p class="lead mb-4">Tres niveles de seguridad profesional con ThreatDown – elige el que mejor se adapte a tus necesidades</p>
-      <p class="small">Facturación mensual por endpoint activo. Precios aproximados en USD.</p>
+    <div class="footer-bottom">
+      <p>&copy; 2026 UnlockMxPro. Todos los derechos reservados.</p>
+      <p>ThreatDown es marca registrada de Malwarebytes Inc.</p>
     </div>
-  </section>
+  </div>
+</footer>
 
-  <!-- Planes – 3 cards -->
-  <section class="container py-5">
-    <div class="row g-4 justify-content-center">
-      
-      <!-- Plan 1: Essential Real-Time Protection -->
-      <div class="col-lg-4 col-md-6">
-        <div class="card h-100 shadow border-primary border-2">
-          <div class="card-header bg-primary text-white text-center">
-            <h4 class="mb-0">Essential Real-Time Protection</h4>
-            <small>Protección esencial en tiempo real</small>
-          </div>
-          <div class="card-body text-center">
-            <h5 class="card-title fw-bold mb-3">$71.99 <small>/endpoint (workstations)</small></h5>
-            <h6 class="text-muted mb-4">$288.99 <small>/endpoint (servidores)</small></h6>
-            
-            <div class="mb-4">
-              <span class="badge bg-success fs-6">100% Protection Status</span>
-              <p class="small text-muted mt-2">0 sitios desprotegidos</p>
-            </div>
-
-            <p class="card-text">
-              Antivirus de próxima generación con protección completa contra malware y ransomware. Detecciones predictivas, bloqueo proactivo y remediación integral.
-            </p>
-
-            <ul class="list-unstyled text-start mt-4">
-              <li><i class="fas fa-check text-success me-2"></i>Next-Gen AV + protección ransomware</li>
-              <li><i class="fas fa-check text-success me-2"></i>Protección web en tiempo real</li>
-              <li><i class="fas fa-check text-success me-2"></i>Bloqueo de exploits y fuerza bruta</li>
-              <li><i class="fas fa-check text-success me-2"></i>Remediación end-to-end</li>
-            </ul>
-          </div>
-          <div class="card-footer bg-transparent border-0 text-center">
-            <a href="contacto.html" class="btn btn-outline-primary">Elegir Essential</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Plan 2: Advanced Threat Defense -->
-      <div class="col-lg-4 col-md-6">
-        <div class="card h-100 shadow border-primary border-2 position-relative">
-          <span class="position-absolute top-0 start-50 translate-middle badge bg-warning text-dark">Recomendado</span>
-          <div class="card-header bg-primary text-white text-center">
-            <h4 class="mb-0">Advanced Threat Defense</h4>
-            <small>Defensa avanzada contra amenazas</small>
-          </div>
-          <div class="card-body text-center">
-            <h5 class="card-title fw-bold mb-3">$91.99 <small>/endpoint (workstations)</small></h5>
-            <h6 class="text-muted mb-4">$325.99 <small>/endpoint (servidores)</small></h6>
-            
-            <div class="mb-4">
-              <span class="badge bg-danger fs-6">EDR incluido</span>
-            </div>
-
-            <p class="card-text">
-              Incluye todo de Essential + Endpoint Detection & Response (EDR) con análisis comportamental, rollback de ransomware y aislamiento de dispositivos.
-            </p>
-
-            <ul class="list-unstyled text-start mt-4">
-              <li><i class="fas fa-check text-success me-2"></i>Todo lo de Essential</li>
-              <li><i class="fas fa-check text-success me-2"></i>EDR con análisis de comportamiento e IA</li>
-              <li><i class="fas fa-check text-success me-2"></i>Rollback de ransomware (7 días)</li>
-              <li><i class="fas fa-check text-success me-2"></i>Aislamiento de dispositivo y remote shell</li>
-            </ul>
-          </div>
-          <div class="card-footer bg-transparent border-0 text-center">
-            <a href="contacto.html" class="btn btn-primary">Elegir Advanced</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Plan 3: 24/7 Expert Coverage -->
-      <div class="col-lg-4 col-md-6">
-        <div class="card h-100 shadow border-primary border-2">
-          <div class="card-header bg-primary text-white text-center">
-            <h4 class="mb-0">24/7 Expert Coverage</h4>
-            <small>MDR – Cobertura experta 24/7</small>
-          </div>
-          <div class="card-body text-center">
-            <h5 class="card-title fw-bold mb-3">$119.99 <small>/endpoint</small></h5>
-            <p class="text-muted small mb-4">Add-on (requiere plan Advanced)</p>
-
-            <div class="mb-4">
-              <span class="badge bg-info fs-6">Expertos 24/7</span>
-            </div>
-
-            <p class="card-text">
-              Monitoreo humano 24/7/365 + threat hunting, investigación y respuesta activa por nuestro SOC.
-            </p>
-
-            <ul class="list-unstyled text-start mt-4">
-              <li><i class="fas fa-check text-success me-2"></i>Todo lo de Advanced</li>
-              <li><i class="fas fa-check text-success me-2"></i>Monitoreo SOC 24/7/365</li>
-              <li><i class="fas fa-check text-success me-2"></i>Threat hunting proactivo</li>
-              <li><i class="fas fa-check text-success me-2"></i>Remediación activa por expertos</li>
-              <li><i class="fas fa-check text-success me-2"></i>Investigación y respuesta inmediata</li>
-            </ul>
-          </div>
-          <div class="card-footer bg-transparent border-0 text-center">
-            <a href="contacto.html" class="btn btn-outline-primary">Elegir MDR</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="text-center mt-5">
-      <small class="text-muted">
-        Precios aproximados por endpoint/mes (facturación mensual). Contacta para cotización personalizada y descuentos por volumen.
-      </small>
-    </div>
-  </section>
-
-  <!-- CTA Final -->
-  <section class="bg-primary text-white text-center py-5">
-    <div class="container">
-      <h3 class="mb-4">¿Cuál nivel de protección necesitas?</h3>
-      <p class="lead mb-4">Contáctanos y diseñamos la solución ideal para ti</p>
-      <a href="contacto.html" class="btn btn-light btn-lg px-5">Solicitar Cotización</a>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-dark text-white text-center py-4">
-    <div class="container">
-      <p class="mb-2">© 2025 UnlockMxPro. Todos los derechos reservados.</p>
-      <p class="mb-3">
-        Salvatierra, Guanajuato | Email: unlockmxpro@gmail.com
-      </p>
-      <div>
-        <a href="https://www.facebook.com/people/Unlock-Mx-Pro-Soluciones-Sim/100063644769403/" class="text-white mx-3" target="_blank">
-          <i class="fab fa-facebook fa-2x"></i>
-        </a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
-  <!-- WhatsApp flotante -->
-  <a href="https://wa.me/+524661470586?text=Hola%20UnlockMxPro,%20quiero%20información%20sobre%20los%20planes" 
-     style="position: fixed; bottom: 25px; right: 25px; z-index: 1000;">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="65" class="shadow rounded-circle">
-  </a>
+<a href="https://wa.me/+524661470586?text=Hola%20UnlockMxPro,%20quiero%20información%20sobre%20los%20planes" class="wa-float" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
 
 </body>
 </html>
