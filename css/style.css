@@ -191,6 +191,25 @@ body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--b
 .pricing-card .btn-primary, .pricing-card .btn-outline { width: 100%; display: block; text-align: center; }
 .pricing-note { text-align: center; color: var(--text-light); font-size: 0.85rem; margin-top: 32px; }
 
+/* ===== PARTNER LOGO ===== */
+.partner-logo-wrap {
+  display: flex; justify-content: center; align-items: center;
+  padding: 16px;
+}
+.partner-logo { display: block; width: min(100%, 280px); height: auto; }
+.partner-logo-wide { width: min(100%, 360px); }
+.partner-logo-hero { width: min(100%, 220px); margin: 0 auto 20px; }
+
+/* ===== OWNERSHIP POLICY ===== */
+.policy-note { padding: 0 0 80px; background: var(--bg); }
+.policy-card {
+  max-width: 800px; margin: 0 auto;
+  background: #fff7ed; border: 1px solid #fdba74; border-radius: 16px;
+  padding: 28px 32px;
+}
+.policy-card h2 { font-size: 1.15rem; font-weight: 800; color: var(--text); margin-bottom: 10px; }
+.policy-card p { color: #9a3412; font-size: 0.95rem; margin: 0; }
+
 /* ===== CTA BAND ===== */
 .cta-band { padding: 80px 0; background: var(--gradient); text-align: center; }
 .cta-band h2 { font-size: 2rem; font-weight: 800; color: var(--white); margin-bottom: 12px; }
