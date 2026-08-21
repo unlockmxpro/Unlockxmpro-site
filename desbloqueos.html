@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="js/https-redirect.js"></script>
   <meta name="description" content="Desbloqueos seguros de celulares: SIM, eSIM, IMEI, FRP bypass, reparaciones de pantalla y batería. Orlando FL y México.">
   <title>Desbloqueos y Reparaciones — UnlockMxPro</title>
   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
@@ -18,14 +19,16 @@
 <nav class="navbar">
   <div class="container">
     <a class="logo" href="index.html">Unlock<span>MxPro</span></a>
-    <ul class="nav-links">
+    <ul class="nav-links" id="site-nav">
       <li><a href="index.html">Inicio</a></li>
       <li><a href="ciberseguridad.html">Ciberseguridad</a></li>
       <li><a href="desbloqueos.html" class="active">Desbloqueos</a></li>
       <li><a href="planes.html">Planes</a></li>
       <li><a href="contacto.html" class="btn-nav">Cotización</a></li>
     </ul>
-    <div class="hamburger"><span></span><span></span><span></span></div>
+    <button type="button" class="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
 
@@ -234,7 +237,7 @@
     </div>
     <div class="footer-bottom">
       <p>&copy; 2026 UnlockMxPro. Todos los derechos reservados.</p>
-      <p><a href="privacy.html" style="color:inherit;">Privacy Policy</a> <p>ThreatDown es marca registrada de Malwarebytes Inc.</p>nbsp;·<p>ThreatDown es marca registrada de Malwarebytes Inc.</p>nbsp; ThreatDown es marca registrada de Malwarebytes Inc.</p>
+      <p><a href="privacy.html">Privacy Policy</a> · ThreatDown es marca registrada de Malwarebytes Inc.</p>
     </div>
   </div>
 </footer>
@@ -445,6 +448,7 @@
   <i class="fab fa-whatsapp"></i>
 </a>
 
+<script src="js/nav.js" defer></script>
 <script src="js/chat-widget.js" defer></script>
 </body>
 </html>

@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="js/https-redirect.js"></script>
   <meta name="description" content="Contáctanos para cotizaciones, auditorías gratuitas o soporte en ciberseguridad y desbloqueos. Orlando FL y México.">
   <title>Contacto — UnlockMxPro</title>
   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
@@ -16,14 +17,16 @@
 <nav class="navbar">
   <div class="container">
     <a class="logo" href="index.html">Unlock<span>MxPro</span></a>
-    <ul class="nav-links">
+    <ul class="nav-links" id="site-nav">
       <li><a href="index.html">Inicio</a></li>
       <li><a href="ciberseguridad.html">Ciberseguridad</a></li>
       <li><a href="desbloqueos.html">Desbloqueos</a></li>
       <li><a href="planes.html">Planes</a></li>
       <li><a href="contacto.html" class="btn-nav active">Cotización</a></li>
     </ul>
-    <div class="hamburger"><span></span><span></span><span></span></div>
+    <button type="button" class="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
 
@@ -82,25 +85,42 @@
         </div>
       </div>
 
-      <form class="contact-form" action="https://formspree.io/f/unlockmxpro@gmail.com" method="POST">
+      <form class="contact-form" id="contact-form" novalidate>
         <div class="form-row">
-          <input type="text" name="nombre" placeholder="Tu Nombre" required>
-          <input type="email" name="email" placeholder="Correo Electrónico" required>
+          <label for="nombre">Nombre
+            <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+          </label>
+          <label for="email">Correo electrónico
+            <input type="email" id="email" name="email" autocomplete="email" required>
+          </label>
         </div>
-        <input type="tel" name="telefono" placeholder="Teléfono / WhatsApp (opcional)">
-        <select name="servicio" required>
-          <option value="">¿En qué podemos ayudarte?</option>
-          <option>Ciberseguridad / Antivirus ThreatDown</option>
-          <option>Desbloqueo de celular (SIM / IMEI)</option>
-          <option>Bypass FRP / Google Account</option>
-          <option>Reparación de celular</option>
-          <option>Plan mensual de protección</option>
-          <option>Auditoría de seguridad gratuita</option>
-          <option>Otro</option>
-        </select>
-        <textarea name="mensaje" placeholder="Cuéntanos más sobre lo que necesitas..." rows="5" required></textarea>
-        <button type="submit" class="btn-primary">Enviar Mensaje <i class="fas fa-paper-plane" style="margin-left:8px;"></i></button>
-        <p style="font-size:0.82rem; color:var(--text-light); margin-top:8px;">O escríbenos directo por <a href="https://wa.me/+524661470586" style="color:var(--primary);">WhatsApp</a> para respuesta inmediata.</p>
+        <label for="telefono">Teléfono / WhatsApp <span style="font-weight:400;color:var(--text-light);">(opcional)</span>
+          <input type="tel" id="telefono" name="telefono" autocomplete="tel">
+        </label>
+        <label for="servicio">¿En qué podemos ayudarte?
+          <select id="servicio" name="servicio" required>
+            <option value="">Selecciona un servicio</option>
+            <option value="Ciberseguridad / Antivirus ThreatDown">Ciberseguridad / Antivirus ThreatDown</option>
+            <option value="Desbloqueo de celular (SIM / IMEI)">Desbloqueo de celular (SIM / IMEI)</option>
+            <option value="Bypass FRP / Google Account">Bypass FRP / Google Account</option>
+            <option value="Reparación de celular">Reparación de celular</option>
+            <option value="Plan mensual de protección">Plan mensual de protección</option>
+            <option value="Auditoría de seguridad gratuita">Auditoría de seguridad gratuita</option>
+            <option value="Otro">Otro</option>
+          </select>
+        </label>
+        <label for="mensaje">Mensaje
+          <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Cuéntanos más sobre lo que necesitas..."></textarea>
+        </label>
+        <div class="form-actions">
+          <button type="submit" class="btn-primary"><i class="fab fa-whatsapp" style="margin-right:8px;"></i>Enviar por WhatsApp</button>
+          <button type="button" id="contact-email" class="btn-outline"><i class="fas fa-envelope" style="margin-right:8px;"></i>Enviar por correo</button>
+        </div>
+        <p id="contact-status" class="contact-status" hidden></p>
+        <p style="font-size:0.82rem; color:var(--text-light);">El botón principal abre WhatsApp con tu mensaje listo. También puedes enviarlo desde tu correo.</p>
+        <noscript>
+          <p style="font-size:0.9rem; color:var(--text);">JavaScript está desactivado. Escríbenos directo por <a href="https://wa.me/524661470586?text=Hola%20UnlockMxPro,%20quiero%20una%20cotización" style="color:var(--primary);">WhatsApp</a> o <a href="mailto:unlockmxpro@gmail.com" style="color:var(--primary);">unlockmxpro@gmail.com</a>.</p>
+        </noscript>
       </form>
     </div>
   </div>
@@ -130,7 +150,7 @@
       <div class="footer-links">
         <h4>Empresa</h4>
         <ul>
-          <li><a href="nosotros">Nosotros</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
           <li><a href="contacto.html">Contacto</a></li>
         </ul>
       </div>
@@ -145,7 +165,7 @@
     </div>
     <div class="footer-bottom">
       <p>&copy; 2026 UnlockMxPro. Todos los derechos reservados.</p>
-      <p><a href="privacy.html" style="color:inherit;">Privacy Policy</a> <p>ThreatDown es marca registrada de Malwarebytes Inc.</p>nbsp;·<p>ThreatDown es marca registrada de Malwarebytes Inc.</p>nbsp; ThreatDown es marca registrada de Malwarebytes Inc.</p>
+      <p><a href="privacy.html">Privacy Policy</a> · ThreatDown es marca registrada de Malwarebytes Inc.</p>
     </div>
   </div>
 </footer>
@@ -154,6 +174,8 @@
   <i class="fab fa-whatsapp"></i>
 </a>
 
+<script src="js/nav.js" defer></script>
+<script src="js/contact-form.js" defer></script>
 <script src="js/chat-widget.js" defer></script>
 </body>
 </html>
