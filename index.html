@@ -3,14 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="js/https-redirect.js"></script>
   <meta name="description" content="Ciberseguridad avanzada y desbloqueos seguros de celulares. Protección ThreatDown contra malware, ransomware y más. Orlando FL y México.">
   <title>UnlockMxPro — Ciberseguridad y Soluciones Móviles</title>
+  <link rel="canonical" href="https://unlockmxpro.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="UnlockMxPro">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:title" content="UnlockMxPro — Ciberseguridad y Soluciones Móviles">
+  <meta property="og:description" content="Ciberseguridad avanzada y desbloqueos seguros de celulares. Protección ThreatDown contra malware, ransomware y más. Orlando FL y México.">
+  <meta property="og:url" content="https://unlockmxpro.com/">
+  <meta property="og:image" content="https://unlockmxpro.com/img/og-cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="UnlockMxPro — Ciberseguridad y Soluciones Móviles">
+  <meta name="twitter:description" content="Ciberseguridad avanzada y desbloqueos seguros de celulares. Protección ThreatDown contra malware, ransomware y más. Orlando FL y México.">
+  <meta name="twitter:image" content="https://unlockmxpro.com/img/og-cover.png">
   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
   <link rel="manifest" href="img/site.webmanifest">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "UnlockMxPro",
+    "url": "https://unlockmxpro.com/",
+    "email": "unlockmxpro@gmail.com",
+    "telephone": "+524661470586",
+    "description": "Ciberseguridad avanzada y desbloqueos seguros de celulares. Protección ThreatDown. Orlando FL y México.",
+    "areaServed": ["Orlando, FL", "Salvatierra, Guanajuato"],
+    "sameAs": ["https://www.facebook.com/people/Unlock-Mx-Pro-Soluciones-Sim/100063644769403/"]
+  }
+  </script>
 </head>
 <body>
 
@@ -18,14 +46,16 @@
 <nav class="navbar">
   <div class="container">
     <a class="logo" href="index.html">Unlock<span>MxPro</span></a>
-    <ul class="nav-links">
+    <ul class="nav-links" id="site-nav">
       <li><a href="index.html" class="active">Inicio</a></li>
       <li><a href="ciberseguridad.html">Ciberseguridad</a></li>
       <li><a href="desbloqueos.html">Desbloqueos</a></li>
       <li><a href="planes.html">Planes</a></li>
       <li><a href="contacto.html" class="btn-nav">Cotización</a></li>
     </ul>
-    <div class="hamburger"><span></span><span></span><span></span></div>
+    <button type="button" class="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
 
@@ -115,11 +145,8 @@
         </ul>
         <a href="planes.html" class="btn-primary">Ver Planes ThreatDown</a>
       </div>
-      <div style="display:flex; justify-content:center; align-items:center;">
-        <div style="width:240px; height:240px; border-radius:50%; background:rgba(37,99,235,0.15); border:2px solid rgba(56,189,248,0.3); display:flex; flex-direction:column; align-items:center; justify-content:center;">
-          <i class="fas fa-shield-alt" style="font-size:5rem; color:var(--accent); margin-bottom:12px;"></i>
-          <span style="font-size:0.85rem; font-weight:700; color:var(--accent); letter-spacing:3px;">PROTEGIDO</span>
-        </div>
+      <div class="partner-logo-wrap">
+        <img src="images/Partners/ThreatDown_2.0_Stacked_Reverse.svg" alt="ThreatDown by Malwarebytes" class="partner-logo" width="280" height="152">
       </div>
     </div>
   </div>
@@ -212,7 +239,7 @@
       <div class="footer-links">
         <h4>Empresa</h4>
         <ul>
-          <li><a href="nosotros">Nosotros</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
           <li><a href="planes.html">Precios</a></li>
           <li><a href="contacto.html">Contacto</a></li>
           <li><a href="ciberseguridad.html">ThreatDown Partner</a></li>
@@ -230,16 +257,17 @@
     </div>
     <div class="footer-bottom">
       <p>&copy; 2026 UnlockMxPro. Todos los derechos reservados.</p>
-      <p><a href="privacy.html" style="color:inherit;">Privacy Policy</a> <p>ThreatDown es marca registrada de Malwarebytes Inc.</p>nbsp;·<p>ThreatDown es marca registrada de Malwarebytes Inc.</p>nbsp; ThreatDown es marca registrada de Malwarebytes Inc.</p>
+      <p><a href="privacy.html">Privacy Policy</a> · ThreatDown es marca registrada de Malwarebytes Inc.</p>
     </div>
   </div>
 </footer>
 
 <!-- WhatsApp flotante -->
-<a href="https://wa.me/+524661470586?text=Hola%20UnlockMxPro,%20quiero%20una%20cotización%20gratuita" class="wa-float" target="_blank">
+<a href="https://wa.me/+524661470586?text=Hola%20UnlockMxPro,%20quiero%20una%20cotización%20gratuita" class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
   <i class="fab fa-whatsapp"></i>
 </a>
 
+<script src="js/nav.js" defer></script>
 <script src="js/chat-widget.js" defer></script>
 </body>
 </html>

@@ -3,8 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="js/https-redirect.js"></script>
   <meta name="description" content="Protección avanzada contra malware, ransomware, exploits y amenazas digitales. ThreatDown partner autorizado. Orlando FL y México.">
   <title>Ciberseguridad — UnlockMxPro</title>
+  <link rel="canonical" href="https://unlockmxpro.com/ciberseguridad.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="UnlockMxPro">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:title" content="Ciberseguridad — UnlockMxPro">
+  <meta property="og:description" content="Protección avanzada contra malware, ransomware, exploits y amenazas digitales. ThreatDown partner autorizado. Orlando FL y México.">
+  <meta property="og:url" content="https://unlockmxpro.com/ciberseguridad.html">
+  <meta property="og:image" content="https://unlockmxpro.com/img/og-cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ciberseguridad — UnlockMxPro">
+  <meta name="twitter:description" content="Protección avanzada contra malware, ransomware, exploits y amenazas digitales. ThreatDown partner autorizado. Orlando FL y México.">
+  <meta name="twitter:image" content="https://unlockmxpro.com/img/og-cover.png">
   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
   <link rel="manifest" href="img/site.webmanifest">
@@ -18,21 +33,24 @@
 <nav class="navbar">
   <div class="container">
     <a class="logo" href="index.html">Unlock<span>MxPro</span></a>
-    <ul class="nav-links">
+    <ul class="nav-links" id="site-nav">
       <li><a href="index.html">Inicio</a></li>
       <li><a href="ciberseguridad.html" class="active">Ciberseguridad</a></li>
       <li><a href="desbloqueos.html">Desbloqueos</a></li>
       <li><a href="planes.html">Planes</a></li>
       <li><a href="contacto.html" class="btn-nav">Cotización</a></li>
     </ul>
-    <div class="hamburger"><span></span><span></span><span></span></div>
+    <button type="button" class="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
 
 <!-- PAGE HERO -->
 <section class="page-hero">
   <div class="container">
-    <div class="hero-badge" style="margin-bottom:20px;">🛡️ ThreatDown Partner Autorizado</div>
+    <img src="images/Partners/ThreatDown_2.0_Horizontal_Reverse.svg" alt="ThreatDown by Malwarebytes" class="partner-logo partner-logo-hero" width="220" height="34">
+    <div class="hero-badge" style="margin-bottom:20px;">ThreatDown Partner Autorizado</div>
     <h1>Ciberseguridad <span class="gradient-text">Avanzada</span></h1>
     <p>Protección completa contra malware, ransomware, exploits y amenazas modernas — para celulares, computadoras y pequeños negocios.</p>
   </div>
@@ -85,6 +103,7 @@
   <div class="container">
     <div class="two-col">
       <div class="two-col-text">
+        <img src="images/Partners/ThreatDown_2.0_Horizontal_Reverse.svg" alt="ThreatDown by Malwarebytes" class="partner-logo partner-logo-wide" width="360" height="55" style="margin-bottom:20px;">
         <div class="hero-badge" style="margin-bottom:20px;">Partner Autorizado</div>
         <h2 style="color:var(--white); font-size:2rem; font-weight:800; margin-bottom:16px;">Powered by <span class="gradient-text">ThreatDown</span></h2>
         <p style="color:#94a3b8; margin-bottom:24px;">Como partner autorizado de ThreatDown (by Malwarebytes), llevamos la seguridad endpoint empresarial a particulares y pequeños negocios a precios accesibles.</p>
@@ -189,7 +208,7 @@
       <div class="footer-links">
         <h4>Empresa</h4>
         <ul>
-          <li><a href="nosotros">Nosotros</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
           <li><a href="planes.html">Precios</a></li>
           <li><a href="contacto.html">Contacto</a></li>
         </ul>
@@ -205,15 +224,16 @@
     </div>
     <div class="footer-bottom">
       <p>&copy; 2026 UnlockMxPro. Todos los derechos reservados.</p>
-      <p><a href="privacy.html" style="color:inherit;">Privacy Policy</a> <p>ThreatDown es marca registrada de Malwarebytes Inc.</p>nbsp;·<p>ThreatDown es marca registrada de Malwarebytes Inc.</p>nbsp; ThreatDown es marca registrada de Malwarebytes Inc.</p>
+      <p><a href="privacy.html">Privacy Policy</a> · ThreatDown es marca registrada de Malwarebytes Inc.</p>
     </div>
   </div>
 </footer>
 
-<a href="https://wa.me/+524661470586?text=Hola%20UnlockMxPro,%20quiero%20información%20sobre%20ciberseguridad" class="wa-float" target="_blank">
+<a href="https://wa.me/+524661470586?text=Hola%20UnlockMxPro,%20quiero%20información%20sobre%20ciberseguridad" class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
   <i class="fab fa-whatsapp"></i>
 </a>
 
+<script src="js/nav.js" defer></script>
 <script src="js/chat-widget.js" defer></script>
 </body>
 </html>

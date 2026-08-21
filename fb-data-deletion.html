@@ -3,8 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="js/https-redirect.js"></script>
   <meta name="description" content="Facebook Data Deletion — UnlockMxPro">
   <title>Data Deletion — UnlockMxPro</title>
+  <link rel="canonical" href="https://unlockmxpro.com/fb-data-deletion.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="UnlockMxPro">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Data Deletion — UnlockMxPro">
+  <meta property="og:description" content="Facebook Data Deletion — UnlockMxPro">
+  <meta property="og:url" content="https://unlockmxpro.com/fb-data-deletion.html">
+  <meta property="og:image" content="https://unlockmxpro.com/img/og-cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Data Deletion — UnlockMxPro">
+  <meta name="twitter:description" content="Facebook Data Deletion — UnlockMxPro">
+  <meta name="twitter:image" content="https://unlockmxpro.com/img/og-cover.png">
   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -16,14 +31,16 @@
 <nav class="navbar">
   <div class="container">
     <a class="logo" href="index.html">Unlock<span>MxPro</span></a>
-    <ul class="nav-links">
+    <ul class="nav-links" id="site-nav">
       <li><a href="index.html">Inicio</a></li>
       <li><a href="ciberseguridad.html">Ciberseguridad</a></li>
       <li><a href="desbloqueos.html">Desbloqueos</a></li>
       <li><a href="planes.html">Planes</a></li>
       <li><a href="contacto.html" class="btn-nav">Cotización</a></li>
     </ul>
-    <div class="hamburger"><span></span><span></span><span></span></div>
+    <button type="button" class="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
 
@@ -108,7 +125,7 @@
       <div class="footer-links">
         <h4>Empresa</h4>
         <ul>
-          <li><a href="nosotros">Nosotros</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
           <li><a href="contacto.html">Contacto</a></li>
           <li><a href="privacy.html">Privacy Policy</a></li>
         </ul>
@@ -124,15 +141,16 @@
     </div>
     <div class="footer-bottom">
       <p>&copy; 2026 UnlockMxPro. Todos los derechos reservados.</p>
-      <p><a href="privacy.html" style="color:inherit;">Privacy Policy</a></p>
+      <p><a href="privacy.html">Privacy Policy</a> · ThreatDown es marca registrada de Malwarebytes Inc.</p>
     </div>
   </div>
 </footer>
 
-<a href="https://wa.me/+524661470586?text=Hola%20UnlockMxPro" class="wa-float" target="_blank">
+<a href="https://wa.me/+524661470586?text=Hola%20UnlockMxPro" class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
   <i class="fab fa-whatsapp"></i>
 </a>
 
+<script src="js/nav.js" defer></script>
 <script src="js/chat-widget.js" defer></script>
 </body>
 </html>
