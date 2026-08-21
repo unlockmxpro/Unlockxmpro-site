@@ -211,14 +211,25 @@ body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--b
 .contact-item a, .contact-item span { color: var(--text); text-decoration: none; font-weight: 500; }
 .contact-item a:hover { color: var(--primary); }
 .contact-form { display: flex; flex-direction: column; gap: 16px; }
+.contact-form label {
+  display: flex; flex-direction: column; gap: 6px;
+  font-size: 0.85rem; font-weight: 600; color: var(--text);
+}
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .contact-form input, .contact-form select, .contact-form textarea {
   width: 100%; padding: 14px 16px; border: 1px solid var(--border); border-radius: 10px;
   font-size: 0.95rem; font-family: 'Inter', sans-serif; background: var(--white);
-  color: var(--text); outline: none; transition: border-color 0.2s;
+  color: var(--text); outline: none; transition: border-color 0.2s; font-weight: 400;
 }
 .contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus { border-color: var(--primary); }
 .contact-form textarea { resize: vertical; }
+.form-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+button.btn-primary, button.btn-outline { font-family: inherit; }
+.contact-status {
+  font-size: 0.9rem; color: var(--primary); font-weight: 500;
+  background: rgba(37, 99, 235, 0.08); border: 1px solid rgba(37, 99, 235, 0.2);
+  border-radius: 10px; padding: 12px 14px;
+}
 .hours { background: var(--white); border: 1px solid var(--border); border-radius: 16px; padding: 24px; margin-top: 24px; }
 .hours h4 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; }
 .hours p { color: var(--text-light); font-size: 0.9rem; margin: 0; line-height: 1.8; }
