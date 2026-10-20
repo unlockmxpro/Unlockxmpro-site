@@ -220,6 +220,14 @@ body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--b
 .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 48px; }
 .footer-brand .logo { display: inline-block; margin-bottom: 16px; }
 .footer-brand p { font-size: 0.9rem; line-height: 1.7; }
+.footer-brand .powered-by {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.78rem;
+  color: #94a3b8;
+  letter-spacing: 0.02em;
+}
+.footer-brand .powered-by strong { color: var(--accent); font-weight: 600; }
 .footer-links h4 { color: var(--white); font-size: 0.9rem; font-weight: 700; margin-bottom: 16px; }
 .footer-links ul { list-style: none; }
 .footer-links li { margin-bottom: 10px; }

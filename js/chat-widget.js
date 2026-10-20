@@ -2,11 +2,11 @@
   'use strict';
 
   const CHATBOT_URL = 'https://postiz.unlockmxpro.com/chatbot';
-  const SITE = document.documentElement.lang === 'en' ? 'msp' : 'unlock';
+  const SITE = document.documentElement.lang === 'en' ? 'en' : 'es';
   const POLL_INTERVAL = 4000;
 
   const T = {
-    msp: {
+    en: {
       title: 'MA MSP Support',
       subtitle: 'Typically replies instantly',
       placeholder: 'Ask us anything...',
@@ -14,12 +14,12 @@
       welcome: "Hi! I'm the MA MSP virtual assistant. How can I help you today?",
       telegram: 'Chat on Telegram',
     },
-    unlock: {
-      title: 'Soporte UnlockMxPro',
+    es: {
+      title: 'Soporte MA MSP',
       subtitle: 'Responde al instante',
       placeholder: 'Escríbenos lo que necesitas...',
       send: 'Enviar',
-      welcome: '¡Hola! Soy el asistente virtual de UnlockMxPro. ¿En qué te ayudo hoy?',
+      welcome: '¡Hola! Soy el asistente virtual de MA MSP. ¿En qué te ayudo hoy?',
       telegram: 'Chatear en Telegram',
     },
   };
@@ -120,9 +120,9 @@
   `;
   document.head.appendChild(style);
 
-  const tgHref = SITE === 'msp'
+  const tgHref = SITE === 'en'
     ? 'https://t.me/mamspnow'
-    : 'https://wa.me/+524661470586?text=Hola%20UnlockMxPro';
+    : 'https://wa.me/+524661470586?text=Hola%20MA%20MSP';
 
   const btn = document.createElement('button');
   btn.id = 'umx-chat-btn';
